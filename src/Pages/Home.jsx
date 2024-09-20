@@ -6,6 +6,7 @@ import About from "../Components/About/About";
 import Projects from "../Components/Projects/Projects";
 import Metting from "../Components/Metting/Metting";
 import Services from "../Components/Services/Services";
+import Team from "../Components/Team/Team";
 import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
@@ -27,16 +28,17 @@ const Home = () => {
     <>
       {isFetching && <Preloader />}
       {/* <MarqueeWapper direction="left" images={images} /> */}
-      <About />
+      {/* <About />
       <MarqueeWapper direction="right" images={images2} />
       <Awards />
       <Projects />
       <Metting />
-      <Services isHeading={true} />
-      <WorkeProcess />
+      <Services isHeading={true} /> */}
+      <Team />
+      {/* <WorkeProcess />
       <Testimonial />
       <Blogs />
-      <ScrollRestoration/>
+      <ScrollRestoration/> */}
     </>
   );
 };
