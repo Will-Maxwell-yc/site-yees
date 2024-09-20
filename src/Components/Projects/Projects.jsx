@@ -19,7 +19,7 @@ const Projects = () => {
     <section className="project__section pt-120 pb-120" id="projects">
       <div className="container">
         <Title
-          mainTitle={"Look at my portfolio and give me your feedback"}
+          mainTitle={"ADSHJAS"}
           sortTitle={"Complete Project"}
         />
 
