@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { List, ArrowRight } from "react-bootstrap-icons";
+import Logo from "./components/Logo";
 
-import Drawer from "../Drawer/Drawer";
+import { Wrapper, Container } from './style'
+
 import logo from "../../../assets/img/logo/logo.png";
+import { ArrowRight } from "react-bootstrap-icons";
 
 const menuList = [
   {
@@ -66,15 +68,9 @@ const menuList = [
       },
     ],
   },
-  {
-    id: 7,
-    path: "/contact",
-    name: "Contact",
-  },
 ];
 
 const Header = () => {
-  const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
   const [dropDownId, setDropDownId] = useState(null);
 
@@ -85,7 +81,7 @@ const Header = () => {
     };
   }, []);
 
-  const isSticky = (e) => {
+  const isSticky = () => {
     const header = document.querySelector(".header-section");
     const scrollTop = window.scrollY;
 
@@ -103,14 +99,12 @@ const Header = () => {
   };
 
   return (
-    <header className={`header-section `}>
-      <div className="container">
+    <Wrapper className={`header-section `}>
+      <Container className="container">
         <div className="header-wrapper">
-          <div className="main__logo">
-            <Link to={"/"} className="logo">
-              <img src={logo} alt="logo" />
-            </Link>
-          </div>
+
+          <Logo image={logo} />
+          
           <ul className={`main-menu ${menuActive ? "active" : ""}`}>
             {menuList.map(({ id, name, path, dropDown, section }) => {
               return (
@@ -119,7 +113,7 @@ const Header = () => {
                     {name}
                   </HashLink>
                   {dropDown?.length && (
-                    <ul className={`sub-menu ${dropDownId === id ? "sub-menu_active":""}`}>
+                    <ul className={`sub-menu ${dropDownId === id ? "sub-menu_active" : ""}`}>
                       {dropDown.map(({ id, name, path }) => {
                         return (
                           <li key={id}>
@@ -155,8 +149,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </Container>
+    </Wrapper>
   );
 };
 
