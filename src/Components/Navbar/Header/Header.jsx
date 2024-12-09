@@ -25,12 +25,12 @@ const Header = () => {
   };
 
   return (
-    <Wrapper className={`header-section `}>
+    <Wrapper className={`header-section`}>
       <Container className="header-wrapper">
-        
-          <Logo image={logo} />
 
-          <NavMenu />
+        <Logo image={logo} />
+
+        <NavMenu />
 
       </Container>
     </Wrapper>

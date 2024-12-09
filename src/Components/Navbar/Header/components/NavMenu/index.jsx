@@ -4,6 +4,8 @@ import { HashLink } from "react-router-hash-link";
 
 import { menuList } from "../menuList/menuList";
 
+import { NavItens, NavItem, Dropdown, ContactButton, Text, Icon } from './style'
+
 import { ArrowRight } from "react-bootstrap-icons";
 
 const NavMenu = () => {
@@ -13,58 +15,49 @@ const NavMenu = () => {
 
     const handleHeaderToggle = () => {
         setMenuActive(!menuActive);
-      };
-    
-      const handleSubMenu = (id) => {
+    };
+
+    const handleSubMenu = (id) => {
         setDropDownId(id);
-      };
+    };
 
     return (
         <>
-            <ul className={`main-menu ${menuActive ? "active" : ""}`}>
+            <NavItens>
                 {menuList.map(({ id, name, path, dropDown, section }) => {
                     return (
-                        <li key={id} onClick={() => handleSubMenu(id)}>
+                        <NavItem key={id} onClick={() => handleSubMenu(id)} onMouseEnter={() => setDropDownId(id)} onMouseLeave={() => setDropDownId(null)}>
                             <HashLink smooth to={`${path}${section ? section : ""}`}>
                                 {name}
                             </HashLink>
                             {dropDown?.length && (
-                                <ul className={`sub-menu ${dropDownId === id ? "sub-menu_active" : ""}`}>
+                                <Dropdown visible={dropDownId == id}>
                                     {dropDown.map(({ id, name, path }) => {
                                         return (
-                                            <li key={id}>
+                                            <NavItem key={id}>
                                                 <HashLink smooth to={path}>
                                                     {name}
                                                 </HashLink>
-                                            </li>
+                                            </NavItem>
                                         );
                                     })}
-                                </ul>
+                                </Dropdown>
                             )}
-                        </li>
+                        </NavItem>
                     );
                 })}
-            </ul>
+            </NavItens>
 
-            <div className="menu__components d-flex align-items-center">
+            <ContactButton>
                 <Link
                     to="/contact"
-                    className="d-flex fw-500 cmn--btn align-items-center gap-2"
                 >
-                    <span className="get__text">Bora Papear</span>
-                    <span>
-                        <ArrowRight className="fz-20" />
-                    </span>
+                    <Text>Bora Papear</Text>
+                    <Icon>
+                        <ArrowRight />
+                    </Icon>
                 </Link>
-                <div
-                    onClick={handleHeaderToggle}
-                    className={`header-bar d-lg-none ${menuActive ? "active" : ""}`}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+            </ContactButton>
         </>
     )
 }
