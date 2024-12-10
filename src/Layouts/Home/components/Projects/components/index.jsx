@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { Container, CustomHover, ProjectSection, ProjectWrapone, Box, Icon, TextMore } from './style';
-import Title from '../../Shared/Title/Title'
-import Lightbox from '../../Shared/LightBox/LightBox';
-import { projectList, imagesList } from '../../../Utlits/projectList';
-import ProjectCard from '../../Shared/ProjectCard/ProjectCard';
+import Title from '../../../../../Components/Shared/Title/Title'
+import Lightbox from '../../../../../Components/Shared/LightBox/LightBox';
+import { projectList, imagesList } from '../../../../../Utlits/projectList';
+import ProjectCard from '../../../../../Components/Shared/ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
 
 const ProjectsLayout = () => {

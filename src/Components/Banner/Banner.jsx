@@ -117,12 +117,12 @@ const Banner = () => {
           </ul>
         </div>
       </div>
-      {lightboxOpen && (
+      {/* {lightboxOpen && (
         <VideoPlay
           setLightboxOpen={setLightboxOpen}
           url="https://www.youtube.com/embed/tgbNymZ7vqY"
         />
-      )}
+      )} */}
     </section>
   );
 };
