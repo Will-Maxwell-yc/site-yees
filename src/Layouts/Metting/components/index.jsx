@@ -1,16 +1,15 @@
 import React from "react";
-import {Envelope, GeoAlt} from "react-bootstrap-icons"
+import { Envelope, GeoAlt } from "react-bootstrap-icons";
 import mettingImag from "../../../assets/img/project/project-need.png";
 
-import { Section, Container, Row, Column, Content, IconBox, ImageWrapper } from "./style";
+import { Section, ImageWrapper, Content, IconBox } from "./style";
 
-const Metting = () => {
-
+const MettingLayout = () => {
     return (
         <Section>
-            <Container>
-                <Row>
-                    <Column lg>
+            <div className="container">
+                <div className="row g-4 align-items-center">
+                    <div className="col-lg-7">
                         <Content>
                             <div className="project__head">
                                 <span
@@ -27,24 +26,18 @@ const Metting = () => {
                                     Let's work together. Fixed a meeting
                                 </h2>
                             </div>
-                            <IconBox
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                            >
+                            <IconBox data-aos="fade-up" data-aos-duration="1000">
                                 <span className="icon">
-                                    <Envelope />
+                                    <Envelope className="i" />
                                 </span>
                                 <span className="box">
                                     <span className="ptext">Email</span>
                                     <a href="#0">davidmatias333@gmail.com</a>
                                 </span>
                             </IconBox>
-                            <IconBox
-                                data-aos="fade-up"
-                                data-aos-duration="1500"
-                            >
+                            <IconBox data-aos="fade-up" data-aos-duration="1500">
                                 <span className="icon">
-                                    <GeoAlt />
+                                    <GeoAlt className="i" />
                                 </span>
                                 <span className="box">
                                     <span className="ptext">Location</span>
@@ -52,19 +45,16 @@ const Metting = () => {
                                 </span>
                             </IconBox>
                         </Content>
-                    </Column>
-                    <Column>
-                        <ImageWrapper
-                            data-aos="zoom-in"
-                            data-aos-duration="2000"
-                        >
+                    </div>
+                    <div className="col-lg-5">
+                        <ImageWrapper data-aos="zoom-in" data-aos-duration="2000">
                             <img src={mettingImag} alt="img" />
                         </ImageWrapper>
-                    </Column>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </Section>
     );
 };
 
-export default Metting;
+export default MettingLayout;

@@ -1,75 +1,90 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  background: url("/src/assets/img/about/about-bg.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 0px;
   overflow: hidden;
-  padding: 120px 0;
-  background: #f8f9fa;
 `;
 
-export const Container = styled.div`
-  max-width: 1140px;
-  margin: 0 auto;
-`;
+export const ImageWrapper = styled.div`
+  width: 100%;
+  padding-left: 10px;
 
-export const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-`;
+  img {
+    width: 100%;
+  }
 
-export const Column = styled.div`
-  flex: ${(props) => (props.lg ? "0 0 58.3333%" : "0 0 41.6667%")};
-  max-width: ${(props) => (props.lg ? "58.3333%" : "41.6667%")};
+  @media (max-width: 1024px) {
+    max-width: 400px;
+  }
 `;
 
 export const Content = styled.div`
+  padding-right: 60px;
+
   .common__sub {
-    font-size: 16px;
-    color: #ff6347;
+    margin: 0 0 24px;
+
+    &::after {
+      display: none;
+    }
   }
 
-  h2 {
-    font-weight: 500;
-    margin: 1rem 0;
-    color: #333;
+  .project__head {
+    border-bottom: 1px solid rgb(38, 37, 37);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    transition: all 0.4s;
+
+    &:hover {
+      border-bottom: 1px solid var(--base);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-right: 0;
   }
 `;
 
 export const IconBox = styled.div`
   display: flex;
+  gap: 20px;
   align-items: center;
-  padding: 15px 0;
+  transition: all 0.4s;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(38, 37, 37);
+  margin-top: 20px;
 
   .icon {
-    font-size: 24px;
-    color: #007bff;
-    margin-right: 10px;
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    background: var(--base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .i {
+      font-size: 26px;
+      color: var(--title);
+    }
   }
 
-  .box {
-    .ptext {
-      font-size: 18px;
-      color: #666;
-    }
+  a {
+    color: var(--white);
+    font-size: 20px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--base);
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
 
     a {
-      text-decoration: none;
-      color: #007bff;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      font-size: 16px;
     }
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  text-align: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
   }
 `;

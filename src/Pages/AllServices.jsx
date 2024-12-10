@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollRestoration } from "react-router-dom";
 
 import Services from "../Components/Services/Services";
-import Metting from "../Components/Metting/Metting";
+import Metting from "../Layouts/Metting/components/index";
 import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
 import Pricing from "../Components/Pricing/Pricing";
 import PageHeader from "../Components/Shared/PageHeader/PageHeader";
