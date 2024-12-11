@@ -1,9 +1,6 @@
-import { } from 'react'
-
-import { Wrapper, Background, Content, Overlay  } from './style'
+import { Wrapper, Background, Content, Overlay, WelcomeText } from './style';
 
 const Hero = () => {
-
     return (
         <Wrapper>
             <Background autoPlay loop muted>
@@ -12,8 +9,12 @@ const Hero = () => {
             <Overlay />
             <Content>
                 <h1>Inovação que conecta ideias e transforma o mundo digital.</h1>
-                <p>Software + Design + Marketing</p>
+                <p>Software <span>+</span> Design <span>+</span> Marketing</p>
             </Content>
+            <WelcomeText>
+                <span>Seja Bem-vindo! Explore nosso site</span>
+                <div className="arrow">↓</div>
+            </WelcomeText>
         </Wrapper>
     );
 };
