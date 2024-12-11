@@ -1,14 +1,19 @@
 import React, {useState} from 'react'
-import { Container, CustomHover, ProjectSection, ProjectWrapone, Box, Icon, TextMore } from './style';
+import { Container, CustomHover, ProjectSection, ProjectWrapone, Box, Icon, TextMore, HoverCircle } from './style';
 import Title from '../../../../../Components/Shared/Title/Title'
 import Lightbox from '../../../../../Components/Shared/LightBox/LightBox';
 import { projectList, imagesList } from '../../../../../Utlits/projectList';
 import ProjectCard from '../../../../../Components/Shared/ProjectCard/ProjectCard';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ProjectsLayout = () => {
     const [currentId, setCurrentId] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
+    const navigate = useNavigate()
+
+    const handleNavigation = () => {
+        navigate("/portfólio")
+    }
 
     const openLightbox = (index) => {
         setCurrentId(index);
@@ -35,16 +40,16 @@ const ProjectsLayout = () => {
                   ))}
               </ProjectWrapone>
               <CustomHover>
-                  <Link to={"/portfólio"}
-                      className="hover__circle mauto"
-                      data-aos="zoom-out-down"
-                      data-aos-duration="2000"
+                  <HoverCircle 
+                    onClick={handleNavigation}
+                    data-aos="zoom-out-down"
+                    data-aos-duration="2000"
                   >
                       <Box>
                           <Icon className="bIcon bi-arrow-up-right"></Icon>
                           <TextMore > Click More Work </TextMore>
                       </Box>
-                  </Link>
+                  </HoverCircle>
               </CustomHover>
         </Container>
           {lightboxOpen && (
