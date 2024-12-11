@@ -11,6 +11,7 @@ import { ArrowRight } from "react-bootstrap-icons";
 const NavMenu = () => {
 
     const [animateStick, setAnimateStick] = useState("")
+    const [animateCloseButton, setAnimateCloseButton] = useState("")
     const [overlay, setOverlay] = useState("")
 
     return (
@@ -26,7 +27,7 @@ const NavMenu = () => {
                         </Icon>
                     </Link>
                 </ContactButton>
-                <MenuButton onMouseEnter={() => setAnimateStick(true)} onMouseLeave={() => setAnimateStick(false)} onClick={() => setOverlay("100%")}>
+                <MenuButton onMouseEnter={() => setAnimateStick("true")} onMouseLeave={() => setAnimateStick("false")} onClick={() => setOverlay("100%")}>
                     <AnimatedSticks>
                         <Stick1 size={animateStick}></Stick1>
                         <Stick2 size={animateStick}></Stick2>
@@ -37,7 +38,7 @@ const NavMenu = () => {
             <Overlay opacity={overlay}>
                 <OverlayContent>
                     <ButtonArea>
-                        <CloseButton onClick={() => setOverlay("0%")}>&#x2716;</CloseButton>
+                        <CloseButton onClick={() => setOverlay("0%")} onMouseEnter={() => setAnimateCloseButton("true")} onMouseLeave={() => setAnimateCloseButton("false")} hover={animateCloseButton}>&#x2716;</CloseButton>
                     </ButtonArea>
                 </OverlayContent>
             </Overlay>

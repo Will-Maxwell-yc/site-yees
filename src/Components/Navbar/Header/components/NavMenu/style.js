@@ -26,6 +26,7 @@ export const Icon = styled.span``
 
 export const MenuButton = styled.div`
     height: 50px;
+    width: 110px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -34,37 +35,58 @@ export const MenuButton = styled.div`
 
 export const AnimatedSticks = styled.div`
     display: flex;
+    width: 50px;
     flex-direction: column;
     align-items: end;
     gap: 10px;
 `
 
-const animation = keyframes`
-    from {width: 20px}
+const mouseEnterSticks = keyframes`
+    from {width: 30px}
     to {width: 50px}
+`
+const mouseLeaveSticks = keyframes`
+    from {width: 50px}
+    to {width: 30px}
 `
 
 export const Stick1 = styled.div`
     background-color: white;
     width: ${({ size }) => {
-        if (size == true) {
-            return "20px"
-        } else if (size == false) {
+        if (size === "true") {
+            return "30px"
+        } else {
             return "50px"
         }
     }};
+    animation-name: ${({ size }) => {
+        if (size === "true") {
+            return mouseLeaveSticks
+        } else if (size === "false") {
+            return mouseEnterSticks
+        }
+    }};
+    animation-duration: 0.5s;
     height: 5px;
     border-radius: 10px;
 `
 export const Stick2 = styled.div`
     background-color: white;
     width: ${({ size }) => {
-        if (size == true) {
+        if (size == "true") {
             return "50px"
-        } else if (size == false) {
-            return "20px"
+        } else {
+            return "30px"
         }
     }};
+    animation-name: ${({ size }) => {
+        if (size === "true") {
+            return mouseEnterSticks
+        } else if (size === "false") {
+            return mouseLeaveSticks
+        }
+    }};
+    animation-duration: 0.5s;
     height: 5px;
     border-radius: 10px;
 `
@@ -72,18 +94,14 @@ export const Stick2 = styled.div`
 export const ButtonTitle = styled.div`
 `
 
-const showOverlay = keyframes`
-
-`
-
 export const Overlay = styled.div`
     position: fixed;
     display: flex;
-    opacity: ${({opacity}) => opacity || "0%"};
-    pointer-events: ${({opacity}) => {
-        if(opacity){
+    opacity: ${({ opacity }) => opacity || "0%"};
+    pointer-events: ${({ opacity }) => {
+        if (opacity) {
             return opacity === "0%" ? "none" : "unset"
-        }else{
+        } else {
             return "none"
         }
     }};
@@ -94,7 +112,6 @@ export const Overlay = styled.div`
     background-color: black;
     color: white;
     z-index: 999;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 `
 
 export const OverlayContent = styled.div`
@@ -110,14 +127,35 @@ export const ButtonArea = styled.div`
     justify-content: end;
 `
 
+const mouseEnterCloseButton = keyframes`
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg)}
+`
+const mouseLeaveCloseButton = keyframes`
+    from {transform: rotate(360deg)}
+    to {transform: rotate(0)}
+`
+
 export const CloseButton = styled.button`
     height: 45px;
     width: 45px;
+    line-height: 45px;
     border-radius: 50px;
-    background: #0CE271;
+    background: linear-gradient(#23C55E, #10B982, #13B8A7);
     border: none;
-
-    &:hover{
-        background: linear-gradient(#23C55E, #10B982, #13B8A7);
-    }
+    font-size: ${({ hover }) => {
+        if (hover === "true") {
+            return "20px"
+        } else {
+            return "18px"
+        }
+    }};
+    animation-name: ${({hover}) => {
+        if(hover === "true"){
+            return mouseEnterCloseButton
+        }else if(hover === "false"){
+            return mouseLeaveCloseButton
+        }
+    }};
+    animation-duration: 0.5s;
 `
