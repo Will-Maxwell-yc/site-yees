@@ -159,3 +159,9 @@ export const CloseButton = styled.button`
     }};
     animation-duration: 0.5s;
 `
+
+export const NavContent = styled.div`
+    background-color: grey;
+    height: 78%;
+    margin-top: 20px;
+`

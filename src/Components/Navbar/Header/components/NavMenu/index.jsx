@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 
 import { menuList } from "../menuList/menuList";
 
-import { Wrapper, ContactButton, Text, Icon, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton } from './style'
+import { Wrapper, ContactButton, Text, Icon, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, NavContent } from './style'
 
 import { ArrowRight } from "react-bootstrap-icons";
 
@@ -40,6 +40,9 @@ const NavMenu = () => {
                     <ButtonArea>
                         <CloseButton onClick={() => setOverlay("0%")} onMouseEnter={() => setAnimateCloseButton("true")} onMouseLeave={() => setAnimateCloseButton("false")} hover={animateCloseButton}>&#x2716;</CloseButton>
                     </ButtonArea>
+                    <NavContent>
+
+                    </NavContent>
                 </OverlayContent>
             </Overlay>
         </>
