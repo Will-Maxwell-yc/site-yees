@@ -9,8 +9,9 @@ import detailbg2 from "../../assets/img/protfolio/prot-detials2.png";
 import ProjectCard from "../../Components/Shared/ProjectCard/ProjectCard";
 import Lightbox from "../../Components/Shared/LightBox/LightBox";
 import { socialIcons } from "../../Utlits/socilIcons";
+import { Bigthumbner, Container, DetailContact, I, Img, Items, ItemsMb, Li, LinkIcon, Paragrafo, PortfolioContainer, ProtItembox, ProtLeft, Social, SubTitle, Title, Wrapper } from "./style";
 
-const ProtfolioDetails = () => {
+const PortfolioDetails = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentId, setCurrentId] = useState(0);
 
@@ -23,55 +24,53 @@ const ProtfolioDetails = () => {
     setLightboxOpen(false);
   };
   return (
-    <>
-
+    <Wrapper>
       <PageHeader
         heading={"Brand Identity & Motion Design"}
         page="Brand Identity & Motion Design"
       />
-      <section className="protfolio__details pb-120">
-        <div className="container">
-          <div
-            className="details__bigthumb mb-60"
+      <PortfolioContainer>
+        <Container>
+          <Bigthumbner
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <img src={detailbg} alt="img" />
-            <div className="prot__detail__contact">
-              <h3>Project Info</h3>
-              <div className="prot__itembox">
-                <div className="prot__left">
-                  <div className="items mb__cus30">
-                    <h5>Clients</h5>
-                    <p>Nicolas Marko</p>
-                  </div>
-                  <div className="items">
-                    <h5>Date</h5>
-                    <p>Sept 19, 2023</p>
-                  </div>
-                </div>
-                <div className="prot__left">
-                  <div className="items mb__cus30">
-                    <h5>Category</h5>
-                    <p>Branding Design</p>
-                  </div>
-                  <div className="items">
-                    <h5>Location</h5>
-                    <p>24 Fifth st.,Los Angeles, USA</p>
-                  </div>
-                </div>
-              </div>
-              <ul className="social d-flex gap-3">
-                {socialIcons.map(({ icon, id }) => (
-                  <li key={id}>
-                    <Link to={""}>
-                      <i>{icon}</i>
-                    </Link>
-                  </li>
+            <Img src={detailbg} alt="img" />
+            <DetailContact>
+              <Title>Project Info</Title>
+              <ProtItembox>
+                <ProtLeft>
+                  <ItemsMb>
+                    <SubTitle>Clients</SubTitle>
+                    <Paragrafo>Nicolas Marko</Paragrafo>
+                  </ItemsMb>
+                  <Items>
+                    <SubTitle>Date</SubTitle>
+                    <Paragrafo>Sept 19, 2023</Paragrafo>
+                  </Items>
+                </ProtLeft>
+                <ProtLeft>
+                  <ItemsMb>
+                    <SubTitle>Category</SubTitle>
+                    <Paragrafo>Branding Design</Paragrafo>
+                  </ItemsMb>
+                  <Items>
+                    <SubTitle>Location</SubTitle>
+                    <Paragrafo>24 Fifth st.,Los Angeles, USA</Paragrafo>
+                  </Items>
+                </ProtLeft>
+              </ProtItembox>
+              <Social>
+                {socialIcons.map(({ icon, id, src }) => (
+                  <Li key={id}>
+                    <LinkIcon href={src} target="_blank" rel="noopener noreferrer" >
+                      <I>{icon}</I>
+                    </LinkIcon>
+                  </Li>
                 ))}
-              </ul>
-            </div>
-          </div>
+              </Social>
+            </DetailContact>
+          </Bigthumbner>
           <div className="details__textwrap">
             <div
               className="text__box mb__cus60"
@@ -167,8 +166,8 @@ const ProtfolioDetails = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </PortfolioContainer>
 
       <section className="protfolidetails__section cmn__bg pt-120 pb-120">
         <div className="container">
@@ -208,8 +207,8 @@ const ProtfolioDetails = () => {
           />
         )}
       </section>
-    </>
+    </Wrapper>
   );
 };
 
-export default ProtfolioDetails;
+export default PortfolioDetails;
