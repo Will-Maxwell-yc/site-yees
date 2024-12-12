@@ -4,8 +4,8 @@ import { Wrapper, Image } from "./style";
 
 const Logo = ({ image }) => {
     return (
-        <Wrapper className="main__logo">
-            <Link to="/" className="logo">
+        <Wrapper>
+            <Link to="/">
                 <Image src={image} alt="logo" />
             </Link>
         </Wrapper>

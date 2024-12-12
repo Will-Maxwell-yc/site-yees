@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Logo from "./components/Logo";
 import NavMenu from "./components/NavMenu";
+import ContactUs from "./components/ContactUs";
 
 import { Wrapper, Container } from './style'
 
@@ -28,9 +29,11 @@ const Header = () => {
     <Wrapper className={`header-section`}>
       <Container className="header-wrapper">
 
+        <NavMenu />
+
         <Logo image={logo} />
 
-        <NavMenu />
+        <ContactUs />
 
       </Container>
     </Wrapper>

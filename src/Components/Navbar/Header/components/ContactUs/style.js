@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const MenuButton = styled.div`
     height: 50px;
-    width: 110px;
+    width: 160px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ export const AnimatedSticks = styled.div`
     display: flex;
     width: 50px;
     flex-direction: column;
-    align-items: start;
+    align-items: end;
     gap: 10px;
 `
 
@@ -106,7 +106,7 @@ export const OverlayContent = styled.div`
 export const ButtonArea = styled.div`
     display: flex;
     width: 100%;
-    justify-content: start;
+    justify-content: end;
 `
 
 const mouseEnterCloseButton = keyframes`

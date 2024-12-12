@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import { menuList } from "../menuList/menuList";
-
 import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, NavContent } from './style'
 
-const NavMenu = () => {
+const ContactUs = () => {
 
     const [animateStick, setAnimateStick] = useState("")
     const [animateCloseButton, setAnimateCloseButton] = useState("")
@@ -16,11 +14,11 @@ const NavMenu = () => {
         <>
             <Wrapper>
                 <MenuButton onMouseEnter={() => setAnimateStick("true")} onMouseLeave={() => setAnimateStick("false")} onClick={() => setOverlay("100%")}>
-                    <ButtonTitle>MENU</ButtonTitle>
                     <AnimatedSticks>
                         <Stick1 size={animateStick}></Stick1>
                         <Stick2 size={animateStick}></Stick2>
                     </AnimatedSticks>
+                    <ButtonTitle>CONTACT US</ButtonTitle>
                 </MenuButton>
             </Wrapper>
             <Overlay opacity={overlay}>
@@ -29,7 +27,7 @@ const NavMenu = () => {
                         <CloseButton onClick={() => setOverlay("0%")} onMouseEnter={() => setAnimateCloseButton("true")} onMouseLeave={() => setAnimateCloseButton("false")} hover={animateCloseButton}>&#x2716;</CloseButton>
                     </ButtonArea>
                     <NavContent>
-                        
+
                     </NavContent>
                 </OverlayContent>
             </Overlay>
@@ -37,4 +35,4 @@ const NavMenu = () => {
     )
 }
 
-export default NavMenu
+export default ContactUs
