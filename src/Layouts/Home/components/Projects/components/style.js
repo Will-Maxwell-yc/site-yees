@@ -59,7 +59,7 @@ export const CustomHover = styled.div`
   margin-top: 100px;
   display: flex;
   justify-content: center;
-
+  
   @media (max-width: 1440px) {
     margin-top: 60px;
   }

@@ -115,7 +115,14 @@ export const CommonIcon = styled.div`
   transition: all 0.4s;
 
   &:hover {
-    background: #23C55E;
+    background: linear-gradient(
+      to right,
+      #23c55e,
+      #10b982,
+      #13b8a7
+    );
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: unset;
      ${Icon}{
         color: var(--title);
      }

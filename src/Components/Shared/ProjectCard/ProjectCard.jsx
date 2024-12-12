@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUpRight } from "react-bootstrap-icons";
 import { Content, Img, LeftCont, Span, Thumb, Wrapper, H3, CommonIcon, Icon } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const ProjectCard = ({
   image,
@@ -10,6 +11,13 @@ const ProjectCard = ({
   openLightbox,
   navigate,
 }) => {
+
+  const ClickNavigate = useNavigate()
+
+  const handleNavigation = () => {
+    ClickNavigate("/protfolio-details")
+  }
+
   return (
     <Wrapper
       index={index}
@@ -26,7 +34,7 @@ const ProjectCard = ({
           </Span>
           <H3>{subHeading}</H3>
         </LeftCont>
-        <CommonIcon onClick={() => openLightbox(index)} >
+        <CommonIcon onClick={handleNavigation} >
           <Icon>
           <ArrowUpRight />
           </Icon>
