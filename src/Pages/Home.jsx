@@ -7,10 +7,10 @@ import Projects from "../Components/Projects/Projects";
 import Metting from "../Layouts/Metting/components/index";
 import Services from "../Components/Services/Services";
 import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
-import Testimonial from "../Components/Testimonial/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/Marquee/MarqueeWapper";
 import Preloader from "../Components/Shared/Preloader/Preloader";
+import TestimonialLayout from "../Layouts/Testimonial/Testimonial";
 
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
       <Metting />
       <Services isHeading={true} />
       <WorkeProcess />
-      <Testimonial />
+      <TestimonialLayout />
       <Blogs />
       <ScrollRestoration/>
     </>
