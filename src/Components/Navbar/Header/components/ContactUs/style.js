@@ -76,10 +76,18 @@ export const Stick2 = styled.div`
 export const ButtonTitle = styled.div`
 `
 
+const showOverlay = keyframes`
+    from {right: -100%}
+    to {right: 0}
+`
+const hideOverlay = keyframes`
+    from {right: 0}
+    to {right: -100%}
+`
+
 export const Overlay = styled.div`
     position: fixed;
     display: flex;
-    opacity: ${({ opacity }) => opacity || "0%"};
     pointer-events: ${({ opacity }) => {
         if (opacity) {
             return opacity === "0%" ? "none" : "unset"
@@ -87,7 +95,21 @@ export const Overlay = styled.div`
             return "none"
         }
     }};
-    right: 0;
+    right: ${({opacity}) => {
+        if(opacity === "0%" || opacity === ""){
+            return "-100%"
+        }else{
+            return "0"
+        }
+    }};
+    animation-name: ${({opacity}) => {
+        if(opacity === "100%"){
+            return showOverlay
+        }else if(opacity === "0%"){
+            return hideOverlay
+        }
+    }};
+    animation-duration: 0.5s;
     top: 0;
     width: 100vw;
     height: 120vh;

@@ -40,22 +40,4 @@ export const menuList = [
         section: "#testimonial",
         name: "Testimonial",
     },
-    {
-        id: 6,
-        path: "/",
-        section: "#blog",
-        name: "Blog",
-        dropDown: [
-            {
-                id: 1,
-                path: "/all-blog",
-                name: "Blog",
-            },
-            {
-                id: 2,
-                path: "/blog-details",
-                name: "Blog Details",
-            },
-        ],
-    },
 ];

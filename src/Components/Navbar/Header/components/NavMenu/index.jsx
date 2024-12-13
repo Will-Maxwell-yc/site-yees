@@ -4,13 +4,14 @@ import { HashLink } from "react-router-hash-link";
 
 import { menuList } from "../menuList/menuList";
 
-import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, NavContent } from './style'
+import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, NavContent, NavLink } from './style'
 
 const NavMenu = () => {
 
     const [animateStick, setAnimateStick] = useState("")
     const [animateCloseButton, setAnimateCloseButton] = useState("")
     const [overlay, setOverlay] = useState("")
+    const [animateLink, setAnimateLink] = useState("")
 
     return (
         <>
@@ -26,10 +27,36 @@ const NavMenu = () => {
             <Overlay opacity={overlay}>
                 <OverlayContent>
                     <ButtonArea>
-                        <CloseButton onClick={() => setOverlay("0%")} onMouseEnter={() => setAnimateCloseButton("true")} onMouseLeave={() => setAnimateCloseButton("false")} hover={animateCloseButton}>&#x2716;</CloseButton>
+                        <CloseButton
+                            onClick={() => {
+                                setOverlay("0%")
+                                setAnimateLink("")
+                            }}
+                            onMouseEnter={() => setAnimateCloseButton("true")}
+                            onMouseLeave={() => setAnimateCloseButton("false")}
+                            hover={animateCloseButton}
+                        >
+                            &#x2716;
+                        </CloseButton>
                     </ButtonArea>
                     <NavContent>
-                        
+                        <div>
+                            {menuList.map((elem, index) => {
+                                return <NavLink hover={animateLink === index ? "true" : "false"}>
+                                    <HashLink
+                                        to={`${elem.path}${elem.section ? elem.section : ""}`}
+                                        key={`${elem.name}${index}`}
+                                        onClick={() => {
+                                            setOverlay("0%")
+                                            setAnimateLink("")
+                                        }}
+                                        onMouseEnter={() => setAnimateLink(index)}
+                                    >
+                                        {elem.name}
+                                    </HashLink>
+                                </NavLink>
+                            })}
+                        </div>
                     </NavContent>
                 </OverlayContent>
             </Overlay>

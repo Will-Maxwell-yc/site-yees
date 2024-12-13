@@ -33,7 +33,7 @@ const mouseLeaveSticks = keyframes`
 `
 
 export const Stick1 = styled.div`
-    background-color: white;
+    background-color: #E8E8E8;
     width: ${({ size }) => {
         if (size === "true") {
             return "30px"
@@ -53,7 +53,7 @@ export const Stick1 = styled.div`
     border-radius: 10px;
 `
 export const Stick2 = styled.div`
-    background-color: white;
+    background-color: #E8E8E8;
     width: ${({ size }) => {
         if (size == "true") {
             return "50px"
@@ -76,10 +76,18 @@ export const Stick2 = styled.div`
 export const ButtonTitle = styled.div`
 `
 
+const showOverlay = keyframes`
+    from {left: -100%}
+    to {left: 0}
+`
+const hideOverlay = keyframes`
+    from {left: 0}
+    to {left: -100%}
+`
+
 export const Overlay = styled.div`
     position: fixed;
     display: flex;
-    opacity: ${({ opacity }) => opacity || "0%"};
     pointer-events: ${({ opacity }) => {
         if (opacity) {
             return opacity === "0%" ? "none" : "unset"
@@ -87,12 +95,26 @@ export const Overlay = styled.div`
             return "none"
         }
     }};
-    right: 0;
+    left: ${({ opacity }) => {
+        if (opacity === "0%" || opacity === "") {
+            return "-100%"
+        } else {
+            return "0"
+        }
+    }};
+    animation-name: ${({ opacity }) => {
+        if (opacity === "100%") {
+            return showOverlay
+        } else if (opacity === "0%") {
+            return hideOverlay
+        }
+    }};
+    animation-duration: 0.5s;
     top: 0;
     width: 100vw;
     height: 120vh;
     background-color: black;
-    color: white;
+    color: #E8E8E8;
     z-index: 999;
 `
 
@@ -132,10 +154,10 @@ export const CloseButton = styled.button`
             return "18px"
         }
     }};
-    animation-name: ${({hover}) => {
-        if(hover === "true"){
+    animation-name: ${({ hover }) => {
+        if (hover === "true") {
             return mouseEnterCloseButton
-        }else if(hover === "false"){
+        } else if (hover === "false") {
             return mouseLeaveCloseButton
         }
     }};
@@ -146,7 +168,97 @@ export const CloseButton = styled.button`
 `
 
 export const NavContent = styled.div`
-    background-color: grey;
-    height: 78%;
-    margin-top: 20px;
+    height: 58%;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+`
+
+const mouseEnterLinkContainer = keyframes`
+    from {
+        width: 500px;
+        height: 50px;
+        line-height: 50px;
+    }
+`
+const mouseEnterLink = keyframes`
+    from {
+        color: #E8E8E8;
+        font-size: 48px;
+    }
+`
+const mouseLeaveLinkContainer = keyframes`
+    from {
+        width: 700px;
+        height: 120px;
+        line-height: 120px;
+    }
+`
+const mouseLeaveLink = keyframes`
+    from {
+        color: #23C55E;
+        font-size: 84px;
+    }
+`
+
+export const NavLink = styled.div`
+    width: ${({ hover }) => {
+        if (hover === "true") {
+            return "700px"
+        } else {
+            return "500px"
+        }
+    }};
+    height: ${({ hover }) => {
+        if (hover === "true") {
+            return "120px"
+        } else {
+            return "50px"
+        }
+    }};
+    line-height: ${({ hover }) => {
+        if (hover === "true") {
+            return "120px"
+        } else {
+            return "50px"
+        }
+    }};
+    margin: 20px 10px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    animation-name: ${({hover}) => {
+        if(hover === "true"){
+            return mouseEnterLinkContainer
+        }else if(hover === "false"){
+            return mouseLeaveLinkContainer
+        }
+    }};
+    animation-duration: 0.5s;
+
+    & a {
+        text-align: center;
+        color: ${({ hover }) => {
+            if (hover === "true") {
+                return "#23C55E"
+            } else {
+                return "#E8E8E8"
+            }
+        }};
+        font-size: ${({ hover }) => {
+            if (hover === "true") {
+                return "84px"
+            } else {
+                return "48px"
+            }
+        }};
+        animation-name: ${({hover}) => {
+        if(hover === "true"){
+            return mouseEnterLink
+        }else if(hover === "false"){
+            return mouseLeaveLink
+        }
+        }};
+        animation-duration: 0.5s;
+    }
 `
