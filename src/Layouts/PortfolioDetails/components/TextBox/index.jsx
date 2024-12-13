@@ -1,6 +1,6 @@
 import React from 'react'
 import { ChalengList, Container, DetailsSmall, Img, List, TextBoxHead, TextOne, TextTwo, Thumb, Wrapper } from './style'
-import detailbg1 from "../../../../src/assets/img/protfolio/prot-detials2.png";
+import detailbg1 from "../../../../../src/assets/img/protfolio/prot-detials2.png";
 
 const TextBox = () => {
     return (
@@ -82,10 +82,10 @@ const TextBox = () => {
             </Container>
             <DetailsSmall>
                 <Thumb>
-                    <Img src={detailbg1} alt="img"/>
+                    <Img src={detailbg1} alt="img" />
                 </Thumb>
                 <Thumb>
-                    <Img src={detailbg1} alt="img"/>
+                    <Img src={detailbg1} alt="img" />
                 </Thumb>
             </DetailsSmall>
         </Wrapper>

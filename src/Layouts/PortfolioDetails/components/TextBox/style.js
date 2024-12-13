@@ -21,6 +21,7 @@ export const TextOne = styled.p`
     margin-top: 0;
     line-height: 1.5;
     margin-bottom: 28px;
+    
 
     @media (max-width: 767px) {
         font-size: 14px;
@@ -47,6 +48,7 @@ export const TextBoxHead = styled.h3`
     font-weight: 600;
     font-family: "Archia";
     margin-bottom: 30px;
+    color: #E8E8E8;
 
     @media (max-width: 1199px) {
         margin-bottom: 20px;

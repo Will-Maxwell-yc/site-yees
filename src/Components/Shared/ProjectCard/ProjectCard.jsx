@@ -10,6 +10,7 @@ const ProjectCard = ({
   index,
   openLightbox,
   navigate,
+  hideCommonIcon
 }) => {
 
   const ClickNavigate = useNavigate()
@@ -34,11 +35,13 @@ const ProjectCard = ({
           </Span>
           <H3>{subHeading}</H3>
         </LeftCont>
-        <CommonIcon onClick={handleNavigation} >
-          <Icon>
-          <ArrowUpRight />
-          </Icon>
-        </CommonIcon>
+        {!hideCommonIcon && ( 
+          <CommonIcon onClick={handleNavigation} >
+            <Icon>
+              <ArrowUpRight />
+            </Icon>
+          </CommonIcon>
+        )}
       </Content>
     </Wrapper>
   );
