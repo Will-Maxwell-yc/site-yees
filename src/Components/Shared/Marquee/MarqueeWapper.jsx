@@ -2,11 +2,11 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { MarqueeInner, Wrapper } from "./style";
 
-const MarqueeWapper = ({ images, direction }) => {
+const MarqueeWapper = ({ images,  }) => {
   return (
     <Wrapper>
       <MarqueeInner>
-        <Marquee direction={direction}>
+        <Marquee>
           {
             images?.map(({ id, image }) => <img key={id} src={image} alt="" />)
           }
