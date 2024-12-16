@@ -7,6 +7,7 @@ export const ProcessItem = styled.div`
     padding: 20px 18px;
     position: relative;
     height: 400px;
+    align-content: center;
 
     @media (max-width: 768px){
         height: auto;
