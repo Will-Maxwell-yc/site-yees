@@ -3,7 +3,7 @@ import { ScrollRestoration } from "react-router-dom";
 
 import { images, images2 } from "../Utlits/marqueeItems";
 import About from "../Components/About/About";
-import Projects from "../Components/Projects/Projects";
+import Projects from "../Layouts/Home/components/Projects/Projects";
 import Metting from "../Components/Metting/Metting";
 import Services from "../Components/Services/Services";
 import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";

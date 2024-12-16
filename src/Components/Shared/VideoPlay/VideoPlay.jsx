@@ -1,25 +1,26 @@
 import React from "react";
 import { XLg } from "react-bootstrap-icons";
+import { Wrapper, LightboxContentVideo, CloseButton, Iframe } from "./style";
 
 const VideoPlay = ({ setLightboxOpen, url }) => {
   const closeLightbox = () => {
     setLightboxOpen(false);
   };
   return (
-    <div className="lightbox">
-      <div className="lightbox__content lightbox__content-video">
-        <button className="close_button" onClick={closeLightbox}>
+    <Wrapper>
+      <LightboxContentVideo>
+        <CloseButton onClick={closeLightbox}>
           <i>
             <XLg />
           </i>
-        </button>
-        <iframe
+        </CloseButton>
+        <Iframe
           // width="420"
           // height="345"
           src={url}
-        ></iframe>
-      </div>
-    </div>
+        ></Iframe>
+      </LightboxContentVideo>
+    </Wrapper>
   );
 };
 

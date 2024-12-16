@@ -12,6 +12,7 @@ export const socialIcons = [
   {
     id: 3,
     icon: <Linkedin />,
+    src:"https://www.linkedin.com/company/midway-creator/"
   },
   {
     id: 4,
