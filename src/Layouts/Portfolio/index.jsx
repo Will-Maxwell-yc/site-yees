@@ -1,7 +1,7 @@
 import React from "react";
 
 import PageHeader from "../../Components/Shared/PageHeader/PageHeader";
-import WorkeProcess from "../../Components/WorkeProcess/WorkeProcess";
+import WorkeProcess from "../Home/components/WorkeProcess/WorkeProcess";
 import { ScrollRestoration } from "react-router-dom";
 import PortfolioComponent from "./components/PortfolioComponente";
 import { Wrapper } from "./style";

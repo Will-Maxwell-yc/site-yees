@@ -6,7 +6,7 @@ import About from "../Components/About/About";
 import Projects from "../Layouts/Home/components/Projects/Projects";
 import Metting from "../Components/Metting/Metting";
 import Services from "../Components/Services/Services";
-import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
+import WorkeProcess from "../Layouts/Home/components/WorkeProcess/WorkeProcess";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/Marquee/MarqueeWapper";
