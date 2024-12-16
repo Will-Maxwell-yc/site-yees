@@ -46,6 +46,7 @@ export const Common = styled.span`
         width: 80px;
         height: 1px;
         background: #23C55E;
+        margin-left: -15px;
     }
 
     &::after {
@@ -53,6 +54,7 @@ export const Common = styled.span`
         width: 80px;
         height: 1px;
         background: #23C55E;
+        margin-right: -15px;
     }
 
     @media (max-width: 480px) { 
@@ -63,14 +65,12 @@ export const Common = styled.span`
         left: 0;
         width: 50px;
         height: 1px;
-        background: var(--base);
         }
 
         &::after {
         right: 0;
         width: 50px;
         height: 1px;
-        background: var(--base);
         }
     }
 `
