@@ -5,8 +5,6 @@ import ContactUs from "./components/ContactUs";
 
 import { Wrapper, Container } from './style'
 
-import logo from "../../../assets/img/logo/logo.png";
-
 
 const Header = () => {
   useEffect(() => {
@@ -31,7 +29,7 @@ const Header = () => {
 
         <NavMenu />
 
-        <Logo image={logo} />
+        <Logo/>
 
         <ContactUs />
 

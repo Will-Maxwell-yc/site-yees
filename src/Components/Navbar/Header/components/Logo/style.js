@@ -9,4 +9,8 @@ export const Wrapper = styled.div`
 export const Image = styled.img`
     width: 150px;
     height: 100%;
+
+    @media (max-width: 1100px) {
+        width: 50px;
+    }
 `

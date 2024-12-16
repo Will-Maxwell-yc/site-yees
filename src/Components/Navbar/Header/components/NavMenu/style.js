@@ -13,6 +13,10 @@ export const MenuButton = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @media (max-width: 1100px) {
+        width: 50px;
+    }
 `
 
 export const AnimatedSticks = styled.div`
@@ -74,6 +78,9 @@ export const Stick2 = styled.div`
 `
 
 export const ButtonTitle = styled.div`
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `
 
 const showOverlay = keyframes`
@@ -128,7 +135,13 @@ export const OverlayContent = styled.div`
 export const ButtonArea = styled.div`
     display: flex;
     width: 100%;
-    justify-content: start;
+    justify-content: space-between;
+`
+
+export const MenuTitle = styled.div`
+    height: 45px;
+    line-height: 45px;
+    font-size: 38px;
 `
 
 const mouseEnterCloseButton = keyframes`

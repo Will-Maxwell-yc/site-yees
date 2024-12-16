@@ -10,9 +10,14 @@ export const MenuButton = styled.div`
     height: 50px;
     width: 160px;
     cursor: pointer;
+    justify-content: end;
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @media (max-width: 1100px) {
+        width: 50px;
+    }
 `
 
 export const AnimatedSticks = styled.div`
@@ -74,6 +79,9 @@ export const Stick2 = styled.div`
 `
 
 export const ButtonTitle = styled.div`
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `
 
 const showOverlay = keyframes`

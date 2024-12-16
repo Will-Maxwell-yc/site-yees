@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 
 import { menuList } from "../menuList/menuList";
 
-import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, NavContent, NavLink } from './style'
+import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, MenuTitle, NavContent, NavLink } from './style'
 
 const NavMenu = () => {
 
@@ -38,6 +38,8 @@ const NavMenu = () => {
                         >
                             &#x2716;
                         </CloseButton>
+                        <MenuTitle>MENU</MenuTitle>
+                        <div></div>
                     </ButtonArea>
                     <NavContent>
                         <div>
