@@ -133,7 +133,7 @@ export const OverlayContent = styled.div`
     padding: 20px;
 `
 
-export const ButtonArea = styled.div`
+export const CloseButtonArea = styled.div`
     display: flex;
     width: 100%;
     justify-content: end;
@@ -178,12 +178,100 @@ export const CloseButton = styled.button`
 export const FormArea = styled.div`
     height: 78%;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
-export const FormContent = styled.form``
+export const FormContent = styled.form`
+    border: 1px solid #0CE271;
+    padding: 50px;
+    width: 1000px;
+    border-radius: 10px;
+`
 
-export const FormElement = styled.div``
+export const FormTitle = styled.h1`
+    width: 100%;
+    text-align: center;
+    color: #0CE271;
+`
 
-export const FormLabel = styled.label``
+export const FormDesc = styled.div`
+    font-size: 35px;
+    text-align: center;
+`
 
-export const FormInput = styled.input``
+export const TelAndSelector = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 910px) {
+        flex-wrap: wrap;
+    }
+`
+
+export const SelectorArea = styled.div`
+    display: inline-block;
+    margin: 0 0 0 20px;
+    width: 100%;
+
+    @media (max-width: 910px) {
+        margin: 0;
+    }
+`
+
+export const Selector = styled.select`
+    width: 100%;
+    height: 50px;
+    border: none;
+`
+
+export const Name = styled.div``
+export const Email = styled.div``
+export const Tel = styled.div`
+    display: inline-block;
+    width: 250px;
+
+    @media (max-width: 910px) {
+        width: 100%;
+    }
+`
+
+export const FormLabel = styled.label`
+    display: block;
+    margin: 10px 0;
+    font-size: 23px;
+`
+
+export const FormInput = styled.input`
+    border: none;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+`
+
+export const MessageArea = styled.div``
+
+export const TextArea = styled.textarea`
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: none;
+`
+
+export const SubmitButtonArea = styled.div`
+    margin: 10px 0;
+    display: flex;
+    justify-content: end;
+`
+
+export const SubmitButton = styled.button`
+    border: none;
+    background-color: #0CE271;
+    color: black;
+    padding: 15px;
+    width: 180px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+`

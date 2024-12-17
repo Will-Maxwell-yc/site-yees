@@ -223,7 +223,7 @@ const mouseEnterLink = keyframes`
         font-size: 48px;
     }
     to {
-        color: #23C55E;
+        color: #0CE271;
         font-size: 84px;
     }
 `
@@ -241,7 +241,7 @@ const mouseLeaveLinkContainer = keyframes`
 `
 const mouseLeaveLink = keyframes`
     from {
-        color: #23C55E;
+        color: #0CE271;
         font-size: 84px;
     }
     to {
@@ -301,7 +301,7 @@ export const NavLink = styled.div`
         text-align: center;
         color: ${({ hover }) => {
         if (hover === "true") {
-            return "#23C55E"
+            return "#0CE271"
         } else {
             return "#E8E8E8"
         }
