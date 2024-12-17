@@ -11,7 +11,8 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/Marquee/MarqueeWapper";
 import Awards from "../Components/About/Awards";
-
+import Preloader from "../Components/Shared/Preloader/Preloader";
+import Team from "../Components/Team";
 
 const Home = () => {
   const [isFetching, setIsFetching] = useState(true);
@@ -30,11 +31,12 @@ const Home = () => {
       <Awards />
       <Projects />
       <Metting />
-      <Services isHeading={true} />
-      <WorkeProcess />
+      <Services isHeading={true} /> */}
+      <Team />
+      {/* <WorkeProcess />
       <Testimonial />
       <Blogs />
-      <ScrollRestoration/>
+      <ScrollRestoration/> */}
     </>
   );
 };
