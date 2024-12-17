@@ -11,7 +11,6 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/Marquee/MarqueeWapper";
 import Awards from "../Components/About/Awards";
-import Preloader from "../Components/Shared/Preloader/Preloader";
 import Team from "../Components/Team";
 
 const Home = () => {
@@ -25,18 +24,17 @@ const Home = () => {
 
   return (
     <>
-      {/* <MarqueeWapper direction="left" images={images} /> */}
       <About />
       <MarqueeWapper images={images2} />
       <Awards />
       <Projects />
       <Metting />
-      <Services isHeading={true} /> */}
+      <Services isHeading={true} /> 
       <Team />
-      {/* <WorkeProcess />
+      <WorkeProcess />
       <Testimonial />
       <Blogs />
-      <ScrollRestoration/> */}
+      <ScrollRestoration/>
     </>
   );
 };
