@@ -194,11 +194,23 @@ export const FormTitle = styled.h1`
     width: 100%;
     text-align: center;
     color: #0CE271;
+
+    @media (max-width: 910px) {
+        font-size: 40px;
+    }
 `
 
 export const FormDesc = styled.div`
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
+
+    @media (max-width: 910px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 20px;
+    }
 `
 
 export const TelAndSelector = styled.div`
@@ -224,6 +236,10 @@ export const Selector = styled.select`
     width: 100%;
     height: 50px;
     border: none;
+
+    & option {
+        width: 20px;
+    }
 `
 
 export const Name = styled.div``
@@ -241,9 +257,18 @@ export const FormLabel = styled.label`
     display: block;
     margin: 10px 0;
     font-size: 23px;
+
+    @media (max-width: 910px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 15px;
+    }
 `
 
 export const FormInput = styled.input`
+    color: black;
     border: none;
     height: 50px;
     width: 100%;
@@ -269,7 +294,7 @@ export const SubmitButton = styled.button`
     border: none;
     background-color: #0CE271;
     color: black;
-    padding: 15px;
+    padding: 8px;
     width: 180px;
     border-radius: 10px;
     font-size: 18px;

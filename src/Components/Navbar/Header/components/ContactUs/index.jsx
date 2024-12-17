@@ -36,7 +36,7 @@ const ContactUs = () => {
                             </Name>
                             <Email>
                                 <FormLabel htmlFor="email">E-mail: *</FormLabel>
-                                <FormInput type="text" id="email" placeholder="" />
+                                <FormInput type="text" id="email" placeholder="exemplo@email.com" />
                             </Email>
                             <TelAndSelector>
                                 <Tel>
