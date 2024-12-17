@@ -1,18 +1,18 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import { MarqueeInner, Wrapper } from "./style";
 
-
-const MarqueeWapper = ({images, direction}) => {
+const MarqueeWapper = ({ images,  }) => {
   return (
-    <div className="marquee-wrapper text-slider">
-      <div className="marquee-inner ">
-        <Marquee direction={direction}>
+    <Wrapper>
+      <MarqueeInner>
+        <Marquee>
           {
-            images?.map(({id, image})=> <img key={id} src={image} alt=""/>)
+            images?.map(({ id, image }) => <img key={id} src={image} alt="" />)
           }
         </Marquee>
-      </div>
-    </div>
+      </MarqueeInner>
+    </Wrapper>
   );
 };
 

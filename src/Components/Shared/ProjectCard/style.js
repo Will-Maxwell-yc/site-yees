@@ -124,7 +124,7 @@ export const CommonIcon = styled.div`
     -webkit-background-clip: border-box;
     -webkit-text-fill-color: unset;
      ${Icon}{
-        color: var(--title);
+        color: #181818;
      }
   }
 `
