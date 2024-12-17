@@ -7,8 +7,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { TeamList } from "../../../../Utlits/TeamList";
 import { Wrapper, CardContainer, CardImage, CardContent, Nome, Heading, Link, Overlay } from "./style";
 
-
-// Componente Card
 const CardCarousel = () => {
     const [cardsDisplay, setCardsDisplay] = useState(1)
     const [windowWidth, setWindowWidth] = useState(window.outerWidth)
@@ -43,13 +41,16 @@ const CardCarousel = () => {
     return (
         <Wrapper>
             <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={10}
                 slidesPerView={cardsDisplay} 
                 navigation
                 pagination={{ clickable: true }}
                 loop={true}
-            
+                autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false
+                }}
             >
                 {TeamList.map((member) => (
                     <SwiperSlide key={member.id}>
