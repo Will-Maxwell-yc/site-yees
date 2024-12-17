@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUpRight } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Content, Img, LeftCont, Span, Thumb, Wrapper, H3, CommonIcon, Icon } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const ProjectCard = ({
   image,
@@ -9,28 +10,40 @@ const ProjectCard = ({
   index,
   openLightbox,
   navigate,
+  hideCommonIcon
 }) => {
+
+  const ClickNavigate = useNavigate()
+
+  const handleNavigation = () => {
+    ClickNavigate("/protfolio-details")
+  }
+
   return (
-    <div
-      className={`project__item  ${index !== 2 && "cus__mb60"}`}
+    <Wrapper
+      index={index}
       data-aos="fade-up"
       data-aos-duration="1000"
     >
-      <div onClick={() => openLightbox(index)} className="thumb mb-30 imgc">
-        <img src={image} alt="img" />
-      </div>
-      <div className="content d-flex align-items-center justify-content-between gap-2">
-        <Link to={navigate} className="left__cont">
-          <span className="base mb-2 mb-xxl-3 d-block text-uppercase">
+      <Thumb  onClick={() => openLightbox(index)} >
+        <Img src={image} alt="img" />
+      </Thumb>
+      <Content>
+        <LeftCont href={navigate}>
+          <Span>
             {heading}
-          </span>
-          <h3>{subHeading}</h3>
-        </Link>
-        <div onClick={() => openLightbox(index)} className="common__icon imgc">
-          <ArrowUpRight className="icon" />
-        </div>
-      </div>
-    </div>
+          </Span>
+          <H3>{subHeading}</H3>
+        </LeftCont>
+        {!hideCommonIcon && ( 
+          <CommonIcon onClick={handleNavigation} >
+            <Icon>
+              <ArrowUpRight />
+            </Icon>
+          </CommonIcon>
+        )}
+      </Content>
+    </Wrapper>
   );
 };
 

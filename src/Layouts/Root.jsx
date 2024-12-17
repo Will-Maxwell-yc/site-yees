@@ -1,23 +1,22 @@
 import React from "react";
-import Header from "../Components/Shared/Header/Header";
+import Header from "../Components/Navbar/Header/Header";
 import Footer from "../Components/Shared/Footer/Footer";
-import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
-import Banner from "../Components/Banner/Banner";
+import { Outlet, useLocation } from "react-router-dom";
+import Hero from "../Layouts/Home/components/Hero/index";
 
 const Root = () => {
   const location = useLocation();
 
   return (
     <>
+      <Header />
       {location.pathname === "/" ? (
         <div className={`banner__section`}>
-          <Header />
-          <Banner />
+          <Hero />
         </div>
       ) : (
-        <Header />
+        <></>
       )}
-
       <Outlet />
       {/* <Footer /> */}
     </>

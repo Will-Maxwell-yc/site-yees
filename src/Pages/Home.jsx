@@ -3,18 +3,16 @@ import { ScrollRestoration } from "react-router-dom";
 
 import { images, images2 } from "../Utlits/marqueeItems";
 import About from "../Components/About/About";
-import Projects from "../Components/Projects/Projects";
+import Projects from "../Layouts/Home/components/Projects/Projects";
 import Metting from "../Components/Metting/Metting";
 import Services from "../Components/Services/Services";
-
-import WorkeProcess from "../Components/WorkeProcess/WorkeProcess";
+import WorkeProcess from "../Layouts/Home/components/WorkeProcess/WorkeProcess";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/Marquee/MarqueeWapper";
 import Awards from "../Components/About/Awards";
 import Preloader from "../Components/Shared/Preloader/Preloader";
 import Team from "../Components/Team";
-
 
 const Home = () => {
   const [isFetching, setIsFetching] = useState(true);
@@ -27,10 +25,9 @@ const Home = () => {
 
   return (
     <>
-      {isFetching && <Preloader />}
       {/* <MarqueeWapper direction="left" images={images} /> */}
-      {/* <About />
-      <MarqueeWapper direction="right" images={images2} />
+      <About />
+      <MarqueeWapper images={images2} />
       <Awards />
       <Projects />
       <Metting />
