@@ -18,7 +18,7 @@ export const Singletab = styled.div`
 `
 
 export const TabLinks = styled.ul`
-    border: 1px solid var(--cusborder);
+    border: 1px solid rgb(38, 37, 37);
     padding: 10px 10px;
     border-radius: 8px;
     max-width: 683px;
@@ -43,19 +43,26 @@ export const Button = styled.button`
     text-align: center;
     display: inline-block;
     font-size: 18px;
-    color: var(--pra);
+    color: #e8e8e8;
     padding: 16px 24px;
     border-radius: 5px;
 `
 
 export const NavLink = styled.li`
     &:not(:last-child) {
-        border-right: 1px solid var(--cusborder);
+        border-right: 1px solid #23C55E;
     }
 
     &.active button {
-        background: var(--base);
-        color: var(--title);
+        background: linear-gradient(
+      to right,
+      #23c55e,
+      #10b982,
+      #13b8a7
+    );
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: unset;
+        color: #101010;
     }
 `
 
