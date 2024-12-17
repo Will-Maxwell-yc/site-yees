@@ -1246,38 +1246,38 @@ p {
 .hover__circle {
   width: 208px;
   height: 208px;
-  background: var(--base);
+  background: #23C55E;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  .box {
-    position: relative;
-    z-index: 1;
-    i {
-      margin-bottom: 1px;
-      font-size: 28px;
-      display: block;
-      color: var(--title);
-      transition: all 0.4s;
-    }
-    .textmore {
-      color: #282828;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 30px;
-      text-transform: capitalize;
-      transition: all 0.4s;
-    }
-  }
+  // .box {
+  //   position: relative;
+  //   z-index: 1;
+  //   i {
+  //     margin-bottom: 1px;
+  //     font-size: 28px;
+  //     display: block;
+  //     color: var(--title);
+  //     transition: all 0.4s;
+  //   }
+  //   .textmore {
+  //     color: #282828;
+  //     font-size: 18px;
+  //     font-style: normal;
+  //     font-weight: 500;
+  //     line-height: 30px;
+  //     text-transform: capitalize;
+  //     transition: all 0.4s;
+  //   }
+  // }
   &::before {
     width: 208px;
     height: 208px;
     border-radius: 50%;
-    border: 1px solid var(--base);
+    border: 1px solid #23C55E;
     content: "";
     position: absolute;
     top: 10px;
@@ -1292,7 +1292,7 @@ p {
     left: 0;
     transition: all 0.4s;
     width: 10px;
-    background: var(--base);
+    background: #23C55E;
     height: 10px;
     opacity: 0;
   }

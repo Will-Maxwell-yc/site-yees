@@ -6,8 +6,9 @@ import ServiceDetails from "../Pages/ServiceDetails";
 import Contact from "../Pages/Contact/Contact";
 import AllBlogs from "../Pages/AllBlogs/AllBlogs";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
-import Protfolio from "../Pages/Protfolio/Protfolio";
-import ProtfolioDetails from "../Pages/ProtfolioDetails/ProtfolioDetails";
+import PortfolioPage from "../Pages/Protfolio/PortfolioPage";
+import PortfolioDetailsPage from "../Pages/PortfolioDetailsPage/PortfolioDetailsPage";
+
 
 export const router = createBrowserRouter([
   {
@@ -39,12 +40,12 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/protfolio",
-        element: <Protfolio />,
+        path: "/portfólio",
+        element: <PortfolioPage />,
       },
       {
         path: "/protfolio-details",
-        element: <ProtfolioDetails />,
+        element: <PortfolioDetailsPage />,
       },
     ],
   },
