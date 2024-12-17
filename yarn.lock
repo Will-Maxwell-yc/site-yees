@@ -106,11 +106,14 @@
   resolved "https://registry.npmjs.org/@parcel/watcher-linux-x64-glibc/-/watcher-linux-x64-glibc-2.5.0.tgz"
   integrity sha512-d9AOkusyXARkFD66S6zlGXyzx5RvY+chTP9Jp0ypSTC9d4lzyRs9ovGf/80VCxjKddcUvnsGwCHWuF2EoPgWjw==
 
+<<<<<<< HEAD
 "@parcel/watcher-linux-x64-musl@2.5.0":
   version "2.5.0"
   resolved "https://registry.npmjs.org/@parcel/watcher-linux-x64-musl/-/watcher-linux-x64-musl-2.5.0.tgz"
   integrity sha512-iqOC+GoTDoFyk/VYSFHwjHhYrk8bljW6zOhPuhi5t9ulqiYq1togGJB5e3PwYVFFfeVgc6pbz3JdQyDoBszVaA==
 
+=======
+>>>>>>> main
 "@parcel/watcher@^2.4.1":
   version "2.5.0"
   resolved "https://registry.npmjs.org/@parcel/watcher/-/watcher-2.5.0.tgz"
@@ -401,9 +404,15 @@ chalk@^4.0.0:
     supports-color "^7.1.0"
 
 chokidar@^4.0.0:
+<<<<<<< HEAD
   version "4.0.2"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-4.0.2.tgz"
   integrity sha512-/b57FK+bblSU+dfewfFe0rT1YjVDfOmeLQwCAuC+vwvgLkXboATqqmy+Ipux6JrF6L5joe5CBnFOw+gLWH6yKg==
+=======
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/chokidar/-/chokidar-4.0.1.tgz"
+  integrity sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==
+>>>>>>> main
   dependencies:
     readdirp "^4.0.1"
 
@@ -1483,11 +1492,14 @@ react-fast-marquee@^1.6.2:
   version "1.6.2"
   resolved "https://registry.npmjs.org/react-fast-marquee/-/react-fast-marquee-1.6.2.tgz"
   integrity sha512-bXUuW1r+Yzd8ZjsPmMDy8WJMubHAZd/7n0W/IzUQHtd0iBfxWohP6hzCFnEHWMCOtC9wxSAq/BiEnig4kdI2Vw==
+<<<<<<< HEAD
 
 react-icons@^5.4.0:
   version "5.4.0"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-5.4.0.tgz"
   integrity sha512-7eltJxgVt7X64oHh6wSWNwwbKTCtMfK35hcjvJS0yxEAhPM8oUKdS3+kqaW1vicIltw+kR2unHaa12S9pPALoQ==
+=======
+>>>>>>> main
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -1516,7 +1528,11 @@ react-router@6.17.0:
   dependencies:
     "@remix-run/router" "1.10.0"
 
+<<<<<<< HEAD
 react@*, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.0 || 18.0.0", react@>=15, react@>=16.8, react@>=16.8.6:
+=======
+react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.0 || 18.0.0", react@>=15, react@>=16.8, react@>=16.8.6:
+>>>>>>> main
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -1609,9 +1625,15 @@ safe-regex-test@^1.0.0:
     is-regex "^1.1.4"
 
 sass@*, sass@^1.77.8:
+<<<<<<< HEAD
   version "1.83.0"
   resolved "https://registry.npmjs.org/sass/-/sass-1.83.0.tgz"
   integrity sha512-qsSxlayzoOjdvXMVLkzF84DJFc2HZEL/rFyGIKbbilYtAvlCxyuzUeff9LawTn4btVnLKg75Z8MMr1lxU1lfGw==
+=======
+  version "1.82.0"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.82.0.tgz"
+  integrity sha512-j4GMCTa8elGyN9A7x7bEglx0VgSpNUG4W4wNedQ33wSMdnkqQCT8HTwOaVSV4e6yQovcu/3Oc4coJP/l0xhL2Q==
+>>>>>>> main
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"
