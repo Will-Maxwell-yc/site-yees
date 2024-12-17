@@ -136,12 +136,21 @@ export const ButtonArea = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    & div {
+        width: 45px;
+    }
 `
 
 export const MenuTitle = styled.div`
-    height: 45px;
-    line-height: 45px;
-    font-size: 38px;
+    display: none;
+    @media (max-width: 1140px) {
+        width: 120px !important;
+        height: 45px;
+        line-height: 45px;
+        font-size: 38px;
+        text-align: center;   
+    }
 `
 
 const mouseEnterCloseButton = keyframes`
@@ -187,17 +196,35 @@ export const NavContent = styled.div`
     align-items: center;
 `
 
+export const NavLinks = styled.div`
+    @media (max-width: 1140px) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+`
+
 const mouseEnterLinkContainer = keyframes`
     from {
         width: 500px;
         height: 50px;
         line-height: 50px;
     }
+    to {
+        width: 700px;
+        height: 120px;
+        line-height: 120px;
+    }
 `
 const mouseEnterLink = keyframes`
     from {
         color: #E8E8E8;
         font-size: 48px;
+    }
+    to {
+        color: #23C55E;
+        font-size: 84px;
     }
 `
 const mouseLeaveLinkContainer = keyframes`
@@ -206,11 +233,20 @@ const mouseLeaveLinkContainer = keyframes`
         height: 120px;
         line-height: 120px;
     }
+    to {
+        width: 500px;
+        height: 50px;
+        line-height: 50px;
+    }
 `
 const mouseLeaveLink = keyframes`
     from {
         color: #23C55E;
         font-size: 84px;
+    }
+    to {
+        color: #E8E8E8;
+        font-size: 48px;
     }
 `
 
@@ -240,38 +276,67 @@ export const NavLink = styled.div`
     display: inline-block;
     justify-content: center;
     text-align: center;
-    animation-name: ${({hover}) => {
-        if(hover === "true"){
+    animation-name: ${({ hover }) => {
+        if (hover === "true") {
             return mouseEnterLinkContainer
-        }else if(hover === "false"){
+        } else if (hover === "false") {
             return mouseLeaveLinkContainer
         }
     }};
     animation-duration: 0.5s;
 
+    @media (max-width: 1340px) {
+        animation: none;
+        width: 500px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    @media (max-width: 450px) {
+        width: 100%;
+        margin: 30px 0;
+    }
+
     & a {
         text-align: center;
         color: ${({ hover }) => {
-            if (hover === "true") {
-                return "#23C55E"
-            } else {
-                return "#E8E8E8"
-            }
-        }};
+        if (hover === "true") {
+            return "#23C55E"
+        } else {
+            return "#E8E8E8"
+        }
+    }};
         font-size: ${({ hover }) => {
+        if (hover === "true") {
+            return "84px"
+        } else {
+            return "48px"
+        }
+    }};
+        animation-name: ${({ hover }) => {
+        if (hover === "true") {
+            return mouseEnterLink
+        } else if (hover === "false") {
+            return mouseLeaveLink
+        }
+    }};
+        animation-duration: 0.5s;
+
+        @media (max-width: 1340px) {
+            animation: none;   
+        }
+
+        @media (max-width: 1140px) {
+            font-size: ${({ hover }) => {
             if (hover === "true") {
                 return "84px"
             } else {
-                return "48px"
-            }
-        }};
-        animation-name: ${({hover}) => {
-        if(hover === "true"){
-            return mouseEnterLink
-        }else if(hover === "false"){
-            return mouseLeaveLink
+                return "58px"
+            }}}
         }
-        }};
-        animation-duration: 0.5s;
+
+        @media (max-width: 450px) {
+            font-size: 58px;
+        }
     }
 `

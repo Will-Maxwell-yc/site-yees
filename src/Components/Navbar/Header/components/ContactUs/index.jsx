@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, NavContent } from './style'
+import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, FormArea, FormContent, FormElement, FormLabel, FormInput } from './style'
 
 const ContactUs = () => {
 
@@ -26,9 +26,14 @@ const ContactUs = () => {
                     <ButtonArea>
                         <CloseButton onClick={() => setOverlay("0%")} onMouseEnter={() => setAnimateCloseButton("true")} onMouseLeave={() => setAnimateCloseButton("false")} hover={animateCloseButton}>&#x2716;</CloseButton>
                     </ButtonArea>
-                    <NavContent>
-
-                    </NavContent>
+                    <FormArea>
+                        <FormContent action="" method="post">
+                            <FormElement>
+                                <FormLabel htmlFor="email">E-mail</FormLabel>
+                                <FormInput type="text" id="email" />
+                            </FormElement>
+                        </FormContent>
+                    </FormArea>
                 </OverlayContent>
             </Overlay>
         </>

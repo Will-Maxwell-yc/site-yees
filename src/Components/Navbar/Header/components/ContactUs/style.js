@@ -175,8 +175,15 @@ export const CloseButton = styled.button`
     }
 `
 
-export const NavContent = styled.div`
-    background-color: grey;
+export const FormArea = styled.div`
     height: 78%;
     margin-top: 20px;
 `
+
+export const FormContent = styled.form``
+
+export const FormElement = styled.div``
+
+export const FormLabel = styled.label``
+
+export const FormInput = styled.input``

@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 
 import { menuList } from "../menuList/menuList";
 
-import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, MenuTitle, NavContent, NavLink } from './style'
+import { Wrapper, MenuButton, AnimatedSticks, Stick1, Stick2, ButtonTitle, Overlay, OverlayContent, ButtonArea, CloseButton, MenuTitle, NavContent, NavLinks, NavLink } from './style'
 
 const NavMenu = () => {
 
@@ -42,9 +42,9 @@ const NavMenu = () => {
                         <div></div>
                     </ButtonArea>
                     <NavContent>
-                        <div>
+                        <NavLinks>
                             {menuList.map((elem, index) => {
-                                return <NavLink hover={animateLink === index ? "true" : "false"}>
+                                return <NavLink hover={animateLink === index ? "true" : "false"} key={index}>
                                     <HashLink
                                         to={`${elem.path}${elem.section ? elem.section : ""}`}
                                         key={`${elem.name}${index}`}
@@ -58,7 +58,7 @@ const NavMenu = () => {
                                     </HashLink>
                                 </NavLink>
                             })}
-                        </div>
+                        </NavLinks>
                     </NavContent>
                 </OverlayContent>
             </Overlay>
