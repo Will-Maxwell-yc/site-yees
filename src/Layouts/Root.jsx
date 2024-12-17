@@ -19,7 +19,7 @@ const Root = () => {
       )}
 
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
