@@ -12,7 +12,7 @@ const Root = () => {
       <Header />
       {location.pathname === "/" ? (
         <div className={`banner__section`}>
-          <Banner />
+          <Hero />
         </div>
       ) : (
         <></>
