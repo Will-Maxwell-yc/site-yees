@@ -8,6 +8,7 @@ import AllBlogs from "../Pages/AllBlogs/AllBlogs";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 import PortfolioPage from "../Pages/Protfolio/PortfolioPage";
 import PortfolioDetailsPage from "../Pages/PortfolioDetailsPage/PortfolioDetailsPage";
+import PageTeam from "../Pages/PageTeamDetails/index";
 
 
 export const router = createBrowserRouter([
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: "/protfolio-details",
         element: <PortfolioDetailsPage />,
+      },
+      {
+        path: "/team-details",
+        element: <PageTeam />,
       },
     ],
   },

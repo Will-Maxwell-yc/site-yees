@@ -6,10 +6,16 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules"; 
 import { TeamList } from "../../../../Utlits/TeamList";
 import { Wrapper, CardContainer, CardImage, CardContent, Nome, Heading, Link, Overlay } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const CardCarousel = () => {
     const [cardsDisplay, setCardsDisplay] = useState(1)
     const [windowWidth, setWindowWidth] = useState(window.outerWidth)
+    const ClickNavigate = useNavigate()
+    
+      const handleNavigation = (id) => {
+          ClickNavigate("/team-details", { state: { id } })
+      }
 
     useEffect(() => {
         if (window.outerWidth > 1500) {
@@ -54,7 +60,7 @@ const CardCarousel = () => {
             >
                 {TeamList.map((member) => (
                     <SwiperSlide key={member.id}>
-                        <CardContainer>
+                        <CardContainer onClick={() => handleNavigation(member.id)}>
                             <CardImage src={member.image} alt={member.nome} />
                             <Overlay />
                             <CardContent>
