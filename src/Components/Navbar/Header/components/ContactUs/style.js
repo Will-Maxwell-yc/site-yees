@@ -131,12 +131,17 @@ export const OverlayContent = styled.div`
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+
+    @media (max-width: 1140px) {
+        padding: 10px;
+    }
 `
 
 export const CloseButtonArea = styled.div`
     display: flex;
     width: 100%;
     justify-content: end;
+    margin-bottom: 30px;
 `
 
 const mouseEnterCloseButton = keyframes`
@@ -181,11 +186,16 @@ export const FormArea = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 800px) {
+        align-items: start;
+        margin: 0;
+    }
 `
 
 export const FormContent = styled.form`
     border: 1px solid #0CE271;
-    padding: 50px;
+    padding: 25px;
     width: 1000px;
     border-radius: 10px;
 `
@@ -201,14 +211,10 @@ export const FormTitle = styled.h1`
 `
 
 export const FormDesc = styled.div`
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 
     @media (max-width: 910px) {
-        font-size: 25px;
-    }
-
-    @media (max-width: 450px) {
         font-size: 20px;
     }
 `
@@ -237,8 +243,8 @@ export const Selector = styled.select`
     height: 50px;
     border: none;
 
-    & option {
-        width: 20px;
+    @media (max-width: 800px) {
+        height: 30px;
     }
 `
 
@@ -273,6 +279,10 @@ export const FormInput = styled.input`
     height: 50px;
     width: 100%;
     padding: 10px;
+
+    @media (max-width: 800px) {
+        height: 30px;
+    }
 `
 
 export const MessageArea = styled.div``
@@ -282,6 +292,10 @@ export const TextArea = styled.textarea`
     height: 100px;
     resize: none;
     border: none;
+
+    @media (max-width: 800px) {
+        height: 70px;
+    }
 `
 
 export const SubmitButtonArea = styled.div`

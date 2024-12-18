@@ -145,6 +145,7 @@ export const ButtonArea = styled.div`
 export const MenuTitle = styled.div`
     display: none;
     @media (max-width: 1140px) {
+        display: block;
         width: 120px !important;
         height: 45px;
         line-height: 45px;
@@ -190,7 +191,7 @@ export const CloseButton = styled.button`
 `
 
 export const NavContent = styled.div`
-    height: 58%;
+    height: 70%;
     margin: 30px;
     display: flex;
     align-items: center;
