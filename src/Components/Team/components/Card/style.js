@@ -81,11 +81,14 @@ export const Heading = styled.p`
     color: #e8e8e8;
 `
 
-export const Link = styled.a`
+export const Link = styled.div`
     display: inline-block;
     margin-top: 10px;
-    color: #0CE271;
     text-decoration: none;
+    display: flex;
+    gap: 20px;
+    font-Size: "24px";
+
     &:hover {
       text-decoration: underline;
     }

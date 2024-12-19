@@ -67,12 +67,8 @@ const CardCarousel = () => {
                                 <Nome>{member.nome}</Nome>
                                 <Heading>{member.heading}</Heading>
                                 <Heading>{member.email}</Heading>
-                                <Link
-                                    href={`https://${member.link}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {member.icon}
+                                <Link>
+                                    {member.socialIcons}
                                 </Link>
                             </CardContent>
                         </CardContainer>
