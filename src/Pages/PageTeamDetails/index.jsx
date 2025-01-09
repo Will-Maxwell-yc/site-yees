@@ -7,7 +7,7 @@ const PageTeam = () => {
   return (
     <Wrapper>
         <Details />
-        {/* <PortfólioTeam /> */}
+        <PortfólioTeam />
     </Wrapper>
   )
 }

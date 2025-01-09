@@ -2,13 +2,13 @@ import ft1 from "../assets/img/team/Flavio.jpg";
 import ft2 from "../assets/img/team/Charles.jpg";
 import ft3 from "../assets/img/team/Andressa.jpg";
 import ft4 from "../assets/img/team/Joao.jpg";
-import ft5 from "../assets/img/team/Agig.jpg";
+import ft5 from "../assets/img/team/Agig.png";
 import ft6 from "../assets/img/team/Josiel.jpeg";
 import ft7 from "../assets/img/team/Juliana.jpg";
 import ft8 from "../assets/img/team/Will.jpg";
 import ft9 from "../assets/img/team/Stefanie.jpg";
+import ft10 from "../assets/img/team/miniaturaAdturbos.png";
 import { FaBehance, FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
-
 
 export const TeamList = [
     {
@@ -35,7 +35,21 @@ export const TeamList = [
                 <FaGithubAlt style={{ color: "#0CE271" }} />
             </a>,
         ],
-        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." 
+        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        projetos: [
+            {
+                id: 1,
+                title: "Projeto Beta",
+                description: "Descrição do Projeto Beta, focado em visualização de dados interativa.",
+                imageProject: ft10,
+            },
+            {
+                id: 2,
+                title: "Projeto Sigma",
+                description: "Descrição do Projeto Sigma, um projeto de aprendizado de máquina.",
+                imageProject: ft10,
+            },
+        ], 
     },
     {
         id:2,

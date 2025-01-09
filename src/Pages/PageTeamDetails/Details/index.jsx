@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Card, CardImage, Container, Content, Header, Link, Lore, Nome, SvgContainer, Wrapper } from './style'
 import { TeamList } from '../../../Utlits/TeamList'
-import Title from '../../../Components/Shared/Title/Title'
 import { useLocation } from 'react-router-dom'
 import { GoDownload } from 'react-icons/go'
 
