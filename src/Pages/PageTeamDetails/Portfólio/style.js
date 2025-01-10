@@ -26,13 +26,16 @@ export const TitleProject = styled.h3`
     color: #23c55e;
     opacity: 0;
     text-align: center;
+    z-index: 1;
 `
 export const Texto = styled.p`
     font-size: 20px;
-    color: #999999;
+    color:white;
+    font-weight: 600;
     opacity: 0;
     align-items: center;
     padding: 20px;
+    z-index: 1;
 `
 
 export const Overlay = styled.div`
@@ -52,6 +55,7 @@ export const Card = styled.div`
     width: 100%;
     height: 500px;
     position: relative;
+    cursor: pointer;
 
     &:hover ${Overlay} {
     opacity: 1; 

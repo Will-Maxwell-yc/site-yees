@@ -54,7 +54,6 @@ const ProjectInfo = () => {
                                 </Social>
                             </DetailContact>
                         </Bigthumbner>
-                        <TextBox />
                     </Container>
                 </PortfolioContainer>
             </Wrapper>

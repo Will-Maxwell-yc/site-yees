@@ -55,7 +55,7 @@ const PortfolioComponent = () => {
     
     return (
         <Wrapper>
-            <ProjectSection >
+            <ProjectSection>
                 <Container>
                     <Singletab>
                         <TabLinks data-aos="fade-down" data-aos-duration="2000">

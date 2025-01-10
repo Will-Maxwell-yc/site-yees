@@ -8,6 +8,15 @@ import ft7 from "../assets/img/team/Juliana.jpg";
 import ft8 from "../assets/img/team/Will.jpg";
 import ft9 from "../assets/img/team/Stefanie.jpg";
 import ft10 from "../assets/img/team/miniaturaAdturbos.png";
+import ft11 from "../assets/img/team/miniaturaImoveisSa.png";
+import ft12 from "../assets/img/team/BannerAd.png";
+import ft13 from "../assets/img/team/BannerAd1.png";
+import ft14 from "../assets/img/team/BannerAd2.png";
+import ft15 from "../assets/img/team/BannerAd3.png";
+import ft16 from "../assets/img/team/BannerSa.png";
+import ft17 from "../assets/img/team/BannerSa1.png";
+import ft18 from "../assets/img/team/BannerSa2.png";
+import ft19 from "../assets/img/team/BannerSa3.png";
 import { FaBehance, FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
 
 export const TeamList = [
@@ -39,15 +48,17 @@ export const TeamList = [
         projetos: [
             {
                 id: 1,
-                title: "Projeto Beta",
-                description: "Descrição do Projeto Beta, focado em visualização de dados interativa.",
+                title: "Projeto AdTurbos",
+                description: "Descrição do Projeto AdTurbos, focado em visualização de dados interativa, com blog integrado.",
                 imageProject: ft10,
+                imgs: [ft12, ft13, ft14, ft15],
             },
             {
                 id: 2,
-                title: "Projeto Sigma",
-                description: "Descrição do Projeto Sigma, um projeto de aprendizado de máquina.",
-                imageProject: ft10,
+                title: "Projeto ImoveisSa",
+                description: "Descrição do Projeto ImoveisSa, Site imobiliário com API robusta e front-end interativo, oferecendo busca avançada, detalhes de imóveis em tempo real e agendamento de visitas. Uma experiência fluida e intuitiva para o usuário..",
+                imageProject: ft11,
+                imgs: [ft16, ft19, ft17, ft18],
             },
         ], 
     },
@@ -127,7 +138,23 @@ export const TeamList = [
                 <FaGithubAlt style={{ color: "#0CE271" }} />
             </a>,
         ],
-        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        projetos: [
+            {
+                id: 1,
+                title: "Projeto AdTurbos",
+                description: "Descrição do Projeto AdTurbos, focado em visualização de dados interativa, com blog integrado.",
+                imageProject: ft10,
+                imgs: [ft12, ft13, ft14, ft15],
+            },
+            {
+                id: 2,
+                title: "Projeto ImoveisSa",
+                description: "Descrição do Projeto ImoveisSa, Site imobiliário com API robusta e front-end interativo, oferecendo busca avançada, detalhes de imóveis em tempo real e agendamento de visitas. Uma experiência fluida e intuitiva para o usuário..",
+                imageProject: ft11,
+                imgs: [ft16, ft19, ft17, ft18]
+            },
+        ], 
     },
     {
         id:5,
@@ -153,7 +180,23 @@ export const TeamList = [
                 <FaGithubAlt style={{ color: "#0CE271" }} />
             </a>,
         ],
-        sobre:"Estou começando minha jornada na área de programação, trazendo comigo uma sólida experiência como editor de vídeo e motion designer. Minha paixão por tecnologia e design me impulsionou a explorar o mundo do desenvolvimento, onde estou focado em aprender e aplicar habilidades em programação para criar soluções inovadoras e visualmente atraentes."
+        sobre:"Estou começando minha jornada na área de programação, trazendo comigo uma sólida experiência como editor de vídeo e motion designer. Minha paixão por tecnologia e design me impulsionou a explorar o mundo do desenvolvimento, onde estou focado em aprender e aplicar habilidades em programação para criar soluções inovadoras e visualmente atraentes.",
+        projetos: [
+            {
+                id: 1,
+                title: "Projeto AdTurbos",
+                description: "Descrição do Projeto AdTurbos, focado em visualização de dados interativa, com blog integrado.",
+                imageProject: ft10,
+                imgs: [ft12, ft13, ft14, ft15],
+            },
+            {
+                id: 2,
+                title: "Projeto ImoveisSa",
+                description: "Descrição do Projeto ImoveisSa, Site imobiliário com API robusta e front-end interativo, oferecendo busca avançada, detalhes de imóveis em tempo real e agendamento de visitas. Uma experiência fluida e intuitiva para o usuário..",
+                imageProject: ft11,
+                imgs: [ft16, ft19, ft17, ft18]
+            },
+        ], 
     },
     {
         id:6,
@@ -179,36 +222,26 @@ export const TeamList = [
                 <FaGithubAlt style={{ color: "#0CE271" }} />
             </a>,
         ],
-        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        projetos: [
+            {
+                id: 1,
+                title: "Projeto AdTurbos",
+                description: "Descrição do Projeto AdTurbos, focado em visualização de dados interativa, com blog integrado.",
+                imageProject: ft10,
+                imgs: [ft12, ft13, ft14, ft15],
+            },
+            {
+                id: 2,
+                title: "Projeto ImoveisSa",
+                description: "Descrição do Projeto ImoveisSa, Site imobiliário com API robusta e front-end interativo, oferecendo busca avançada, detalhes de imóveis em tempo real e agendamento de visitas. Uma experiência fluida e intuitiva para o usuário..",
+                imageProject: ft11,
+                imgs: [ft16, ft19, ft17, ft18]
+            },
+        ], 
     },
     {
         id:7,
-        nome: "Juliana Akemy",
-        email: "",
-        heading:"Desenvolvedora FrontEnd",
-        image: ft7,
-        socialIcons: [
-            <a
-                href="linkedin.com/in/juliana-akemy-sugiura-6a1ba7121"
-                target="_blank"
-                rel="noopener noreferrer"
-                key="linkedin"
-            >
-                <FaLinkedinIn style={{color: "#0CE271"}}/>
-            </a>,
-            <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                key="github"
-            >
-                <FaGithubAlt style={{ color: "#0CE271" }} />
-            </a>,
-        ],
-        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-    },
-    {
-        id:8,
         nome: "William Maxwell ",
         email: "w.maxwell.al@hotmail.com",
         heading: "Front-End Developer, Designer Gráfico",
@@ -234,7 +267,7 @@ export const TeamList = [
         sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
     },
     {
-        id:9,
+        id:8,
         nome: "Stefanie Medeiros",
         email: "",
         heading:"DIREÇÃO DE ARTE, DESIGN GRÁFICO",

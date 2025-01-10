@@ -6,13 +6,13 @@ import Title from '../../../Shared/Title/Title'
 const TeamLayout = () => {
   return (
     <Wrapper>
-        <Container>
+      <Container>
         <Title
           mainTitle={"Conheça nosso time"}
           sortTitle={"Equipe"}
         />
-            <Card />
-        </Container>
+        <Card />
+      </Container>
     </Wrapper>
   )
 }
