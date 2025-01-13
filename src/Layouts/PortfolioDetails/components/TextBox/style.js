@@ -1,19 +1,10 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-    margin-bottom: 60px;
-
-    @media (max-width: 1199px) {
-        margin-bottom: 40px;
-    }
+export const Wrapper = styled.div` 
 `
 
 export const Container = styled.div`
-    margin-bottom: 60px;
-
-    @media (max-width: 1199px) {
-        margin-bottom: 40px;
-    }
+    padding: 40px; 
 `
 
 export const TextOne = styled.p`
@@ -22,7 +13,6 @@ export const TextOne = styled.p`
     line-height: 1.5;
     margin-bottom: 28px;
     
-
     @media (max-width: 767px) {
         font-size: 14px;
     }
@@ -97,6 +87,7 @@ export const DetailsSmall = styled.div`
     display: flex;
     align-items: center;
     gap: 30px;
+    padding: 40px;
 
     @media (max-width: 1199px) {
         gap: 20px;

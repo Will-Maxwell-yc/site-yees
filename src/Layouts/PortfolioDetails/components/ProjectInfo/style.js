@@ -10,7 +10,7 @@ export const PortfolioContainer = styled.div`
     }
 
     @media (max-width: 991px) {
-        padding-bottom: 80px; 
+        padding-bottom: 20px; 
     }
 `
 
