@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; 
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules"; 
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { TeamList } from "../../../../Utlits/TeamList";
 import { Wrapper, CardContainer, CardImage, CardContent, Nome, Heading, Link, Overlay } from "./style";
 import { useNavigate } from "react-router-dom";
@@ -12,10 +12,11 @@ const CardCarousel = () => {
     const [cardsDisplay, setCardsDisplay] = useState(1)
     const [windowWidth, setWindowWidth] = useState(window.outerWidth)
     const ClickNavigate = useNavigate()
-    
-      const handleNavigation = (id) => {
-          ClickNavigate("/team-details", { state: { id } })
-      }
+
+    const handleNavigation = (id) => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        ClickNavigate("/team-details", { state: { id } })
+    }
 
     useEffect(() => {
         if (window.outerWidth > 1500) {
@@ -49,7 +50,7 @@ const CardCarousel = () => {
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={10}
-                slidesPerView={cardsDisplay} 
+                slidesPerView={cardsDisplay}
                 navigation
                 pagination={{ clickable: true }}
                 loop={true}

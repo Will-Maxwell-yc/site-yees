@@ -118,7 +118,6 @@ export const CardContainer = styled.div`
     max-width: 458px;
     height: 550px;
     margin: 55px 17px;
-    background-color: black;
     position: relative;
     overflow: hidden;
     cursor: pointer;

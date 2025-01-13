@@ -27,7 +27,7 @@ const Details = () => {
                         {member.sobre}
                     </Lore>
                     <Button >
-                        Download CV <GoDownload style={{ color:"#23c55e"}} />
+                        Download CV <GoDownload className='downloadicon' />
                     </Button>
                     <Link>
                         {member.socialIcons.map((icon) => icon)}

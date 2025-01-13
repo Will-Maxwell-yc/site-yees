@@ -16,7 +16,13 @@ export const ContainerCard = styled.div`
     display: flex;
     width: 100%;
     gap: 40px;
+    align-items: center;
     justify-content: center;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        gap: 60px;
+    }
 `
 
 export const TitleProject = styled.h3`
@@ -27,6 +33,10 @@ export const TitleProject = styled.h3`
     opacity: 0;
     text-align: center;
     z-index: 1;
+
+    @media (max-width: 760px) {
+        opacity: 1;
+    }
 `
 export const Texto = styled.p`
     font-size: 20px;
@@ -36,6 +46,10 @@ export const Texto = styled.p`
     align-items: center;
     padding: 20px;
     z-index: 1;
+
+    @media (max-width: 760px) {
+        opacity: 1;
+    }
 `
 
 export const Overlay = styled.div`
@@ -48,6 +62,10 @@ export const Overlay = styled.div`
     border-radius: 3%;
     opacity: 0; 
     transition: opacity 0.5s ease-in-out; 
+
+    @media (max-width: 760px) {
+        opacity: 1;
+    }
 `
 
 export const Card = styled.div`
@@ -73,7 +91,12 @@ export const Content = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    
+    @media (max-width: 760px) {
+        justify-content: center;
+    }
 `
 
 export const Img = styled.div`
@@ -87,11 +110,11 @@ export const Img = styled.div`
     background-repeat: no-repeat; 
     transition: background-position 5s ease-in-out; 
     
-
     &:hover {
         background-position: 100% 100%; 
     }
-`;
+
+`
 
 
 

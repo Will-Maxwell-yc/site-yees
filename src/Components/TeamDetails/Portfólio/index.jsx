@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Card, Container, ContainerCard, Img, Wrapper, TitleProject, Texto, Overlay, Content } from './style'
-import Title from '../../../Components/Shared/Title/Title'
-import {  TeamList } from '../../../Utlits/TeamList';
+import Title from '../../Shared/Title/Title'
+import { TeamList } from '../../../Utlits/TeamList';
 import { useLocation } from 'react-router-dom';
-import Lightbox from '../../../Components/Shared/LightBox/LightBox';
+import Lightbox from '../../Shared/LightBox/LightBox';
 
 const PortfólioTeam = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -11,10 +11,10 @@ const PortfólioTeam = () => {
   const [projectImages, setProjectImages] = useState([])
 
   const openLightbox = (projetoId) => {
-    const projeto = member.projetos.find((p) => p.id === projetoId); 
+    const projeto = member.projetos.find((p) => p.id === projetoId);
     if (projeto && projeto.imgs) {
-      setProjectImages(projeto.imgs); 
-      setCurrentId(0); 
+      setProjectImages(projeto.imgs);
+      setCurrentId(0);
       setLightboxOpen(true);
     }
   };

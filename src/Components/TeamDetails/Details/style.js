@@ -59,11 +59,6 @@ export const SvgContainer = styled.div`
     animation: ${rotate} 20s linear infinite;
   }
 
-  /* @media (min-width: 569px ) {
-    max-width: 400px;
-    height: 400px
-  } */
-
   @media (min-width: 1200px ) {
     max-width: 450px;
     height: 450px;
@@ -84,11 +79,6 @@ export const CardImage = styled.img`
     position: absolute;
     mix-blend-mode: lighten;
 
-    /* @media (min-width: 569px ) {
-        width: 390px;
-        height: 390px
-    } */
-
     @media (min-width: 1200px ) {
         width: 400px;
         height: 400px
@@ -103,9 +93,6 @@ export const Content = styled.div`
     gap: 20px;
     padding: 20px;
 
-    /* @media (min-width: 950px) {
-        max-width: 450px;
-    } */
 `
 
 export const Header = styled.div`
@@ -146,19 +133,27 @@ export const Link = styled.a`
 `
 
 export const Button = styled.button`
-    padding: 10px 20px;
-    color: #e8e8e8;
-    background-color: transparent;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+      padding: 10px 20px;
+      color: #e8e8e8;
+      border: none;
+      background-color: #292929;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
 
+      .downloadicon  {
+        color: #23c55e;
+      }
 
-    &:hover{
-    background-color: #23c55e; 
-    }
+      &:hover .downloadicon  {
+        color: black
+      }
 
+      &:hover {
+        background-color: #23c55e; 
+        color: black !important;
+      }
 `
 

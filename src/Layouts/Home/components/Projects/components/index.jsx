@@ -4,7 +4,7 @@ import Title from '../../../../../Components/Shared/Title/Title'
 import Lightbox from '../../../../../Components/Shared/LightBox/LightBox';
 import { projectList, imagesList } from '../../../../../Utlits/projectList';
 import ProjectCard from '../../../../../Components/Shared/ProjectCard/ProjectCard';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsLayout = () => {
     const [currentId, setCurrentId] = useState(0);
