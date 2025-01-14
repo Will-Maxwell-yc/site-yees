@@ -157,7 +157,7 @@ export const TeamList = [
     },
     {
         id:5,
-        nome: "Agig",
+        nome: "Bruno Gabriel",
         email: "bgabrielsoares26@gmail.com",
         heading: "front-end developer, Designer",
         image: ft5,
