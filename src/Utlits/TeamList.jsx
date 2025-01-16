@@ -3,7 +3,7 @@ import ft2 from "../assets/img/team/Charles.jpg";
 import ft3 from "../assets/img/team/Andressa.jpg";
 import ft4 from "../assets/img/team/Joao.jpg";
 import ft5 from "../assets/img/team/Arte-Giga.png";
-import ft6 from "../assets/img/team/Josiel.jpeg";
+import ft6 from "../assets/img/team/Josiel.png";
 import ft8 from "../assets/img/team/Will.jpg";
 import ft9 from "../assets/img/team/Stefanie.jpg";
 import ft10 from "../assets/img/team/miniaturaAdturbos.png";
