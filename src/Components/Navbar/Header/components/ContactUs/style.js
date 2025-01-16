@@ -103,17 +103,17 @@ export const Overlay = styled.div`
             return "none"
         }
     }};
-    right: ${({opacity}) => {
-        if(opacity === "0%" || opacity === ""){
+    right: ${({ opacity }) => {
+        if (opacity === "0%" || opacity === "") {
             return "-100%"
-        }else{
+        } else {
             return "0"
         }
     }};
-    animation-name: ${({opacity}) => {
-        if(opacity === "100%"){
+    animation-name: ${({ opacity }) => {
+        if (opacity === "100%") {
             return showOverlay
-        }else if(opacity === "0%"){
+        } else if (opacity === "0%") {
             return hideOverlay
         }
     }};
@@ -155,6 +155,7 @@ export const CloseButton = styled.button`
     border-radius: 50px;
     background: #23C55E;
     border: none;
+    z-index: 999;
     font-size: ${({ hover }) => {
         if (hover === "true") {
             return "20px"
@@ -162,10 +163,10 @@ export const CloseButton = styled.button`
             return "18px"
         }
     }};
-    animation-name: ${({hover}) => {
-        if(hover === "true"){
+    animation-name: ${({ hover }) => {
+        if (hover === "true") {
             return mouseEnterCloseButton
-        }else if(hover === "false"){
+        } else if (hover === "false") {
             return mouseLeaveCloseButton
         }
     }};
@@ -181,13 +182,22 @@ export const FormArea = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 910px) {
+        margin-top: 0;
+        height: 80%;
+    }
 `
 
 export const FormContent = styled.form`
     border: 1px solid #0CE271;
-    padding: 50px;
+    padding: 40px;
     width: 1000px;
     border-radius: 10px;
+
+    @media (max-width: 910px) {
+        padding: 25px;
+    }
 `
 
 export const FormTitle = styled.h1`
@@ -196,20 +206,25 @@ export const FormTitle = styled.h1`
     color: #0CE271;
 
     @media (max-width: 910px) {
-        font-size: 40px;
+        font-size: 30px;
     }
+
 `
 
 export const FormDesc = styled.div`
     font-size: 30px;
     text-align: center;
 
-    @media (max-width: 910px) {
+    @media (max-width: 966px) {
         font-size: 25px;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 910px) {
         font-size: 20px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 15px;
     }
 `
 
@@ -258,21 +273,35 @@ export const FormLabel = styled.label`
     margin: 10px 0;
     font-size: 23px;
 
-    @media (max-width: 910px) {
+    @media (max-width: 900px) {
         font-size: 20px;
+        margin: 10px 0 0 0 ;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 550px) {
         font-size: 15px;
     }
 `
 
 export const FormInput = styled.input`
     color: black;
-    border: none;
+    border: 2px solid ${(props) => (props.error ? "red" : "white")};
     height: 50px;
     width: 100%;
     padding: 10px;
+
+    &:focus {
+    outline: none;
+    border-color: ${(props) => (props.error ? "red" : "#0CE271")};
+    }
+
+    @media (max-width: 900px) {
+        max-height: 50px;
+    }
+
+    @media (max-width: 540px) {
+        height: 40px;
+    }
 `
 
 export const MessageArea = styled.div``
@@ -281,13 +310,30 @@ export const TextArea = styled.textarea`
     width: 100%;
     height: 100px;
     resize: none;
-    border: none;
+    border: 2px solid ${(props) => (props.error ? "red" : "white")};
+
+    &:focus {
+    outline: none;
+    border-color: ${(props) => (props.error ? "red" : "#0CE271")};
+    }
+
+    @media (max-width: 540px) {
+        height: 90px;
+    }
 `
 
 export const SubmitButtonArea = styled.div`
     margin: 10px 0;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    gap: 20px;
+    
+
+    @media (max-width: 540px ) {
+        height: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const SubmitButton = styled.button`
@@ -296,7 +342,33 @@ export const SubmitButton = styled.button`
     color: black;
     padding: 8px;
     width: 180px;
+    height: 60px;
     border-radius: 10px;
     font-size: 18px;
     font-weight: 500;
+
+    @media (max-width: 540px ) {
+        width: 100%;
+    }
+`
+
+export const WrapperError = styled.div`
+    @media (max-width: 669px ) {
+        max-width: 300px;
+    }
+
+    @media (max-width: 590px ) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+`
+
+export const SpanError = styled.span`
+    font-size: 20px;
+    color: ${(props) => (props.error ? "red" : "#0CE271")};
+    @media (max-width: 590px ) {
+        font-size: 15px;
+    }
 `
