@@ -239,56 +239,56 @@ export const TeamList = [
             },
         ], 
     },
-    {
-        id:7,
-        nome: "William Maxwell ",
-        email: "w.maxwell.al@hotmail.com",
-        heading: "Front-End Developer, Designer Gráfico",
-        image: ft8,
-         socialIcons: [
-            <a
-                href="behance.net/wmdesign1"
-                target="_blank"
-                rel="noopener noreferrer"
-                key="linkedin"
-            >
-                <FaBehance style={{ color: "#0CE271" }} />
-            </a>,
-            <a
-                href="https://github.com/Will-Maxwell-yc"
-                target="_blank"
-                rel="noopener noreferrer"
-                key="github"
-            >
-                <FaGithubAlt style={{ color: "#0CE271" }} />
-            </a>,
-        ],
-        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-    },
-    {
-        id:8,
-        nome: "Stefanie Medeiros",
-        email: "",
-        heading:"DIREÇÃO DE ARTE, DESIGN GRÁFICO",
-        image: ft9,
-         socialIcons: [
-            <a
-                href="https://www.behance.net/stefaniemedeiros"
-                target="_blank"
-                rel="noopener noreferrer"
-                key="linkedin"
-            >
-                <FaBehance style={{ color: "#0CE271"  }} />
-            </a>,
-            <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                key="github"
-            >
-                <FaGithubAlt style={{ color: "#0CE271" }} />
-            </a>,
-        ],
-        sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-    },
+    // {
+    //     id:7,
+    //     nome: "William Maxwell ",
+    //     email: "w.maxwell.al@hotmail.com",
+    //     heading: "Front-End Developer, Designer Gráfico",
+    //     image: ft8,
+    //      socialIcons: [
+    //         <a
+    //             href="behance.net/wmdesign1"
+    //             target="_blank"
+    //             rel="noopener noreferrer"
+    //             key="linkedin"
+    //         >
+    //             <FaBehance style={{ color: "#0CE271" }} />
+    //         </a>,
+    //         <a
+    //             href="https://github.com/Will-Maxwell-yc"
+    //             target="_blank"
+    //             rel="noopener noreferrer"
+    //             key="github"
+    //         >
+    //             <FaGithubAlt style={{ color: "#0CE271" }} />
+    //         </a>,
+    //     ],
+    //     sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    // },
+    // {
+    //     id:8,
+    //     nome: "Stefanie Medeiros",
+    //     email: "",
+    //     heading:"DIREÇÃO DE ARTE, DESIGN GRÁFICO",
+    //     image: ft9,
+    //      socialIcons: [
+    //         <a
+    //             href="https://www.behance.net/stefaniemedeiros"
+    //             target="_blank"
+    //             rel="noopener noreferrer"
+    //             key="linkedin"
+    //         >
+    //             <FaBehance style={{ color: "#0CE271"  }} />
+    //         </a>,
+    //         <a
+    //             href=""
+    //             target="_blank"
+    //             rel="noopener noreferrer"
+    //             key="github"
+    //         >
+    //             <FaGithubAlt style={{ color: "#0CE271" }} />
+    //         </a>,
+    //     ],
+    //     sobre:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    // },
 ]
